@@ -1,0 +1,180 @@
+
+============================================================
+  GOOGLE TRENDS — Last 7 Days | US Market | May 27, 2026
+============================================================
+⏳ Fetching: health...
+✅ Done: health
+⏳ Fetching: supplements...
+✅ Done: supplements
+⏳ Fetching: biohacking...
+✅ Done: biohacking
+⏳ Fetching: supplement ingredients...
+✅ Done: supplement ingredients
+
+📌 TOPIC: HEALTH
+----------------------------------------
+🔥 RISING (going viral):
+   1. providence health plan news — 2050%
+   2. willis homes public health alert — 250%
+   3. google health app — 200%
+   4. phil collins health — 130%
+   5. trump health — 60%
+   6. google health — 60%
+   7. battery health check iphone — 50%
+   8. genesis health club — 50%
+   9. how to check ssd health — 50%
+   10. how to check laptop battery health — 50%
+
+📊 TOP SEARCHES:
+   1. mental health — 100
+   2. health insurance — 79
+   3. health department — 30
+   4. behavioral health — 27
+   5. google health — 18
+   6. united health — 18
+   7. texas health — 16
+   8. home health care — 12
+   9. cvs health — 10
+   10. baptist health — 7
+
+📌 TOPIC: SUPPLEMENTS
+----------------------------------------
+🔥 RISING (going viral):
+   1. document supplements — 110%
+   2. jym supplements — 80%
+
+📊 TOP SEARCHES:
+   1. best supplements — 100
+   2. supplement — 42
+   3. iron supplements — 40
+   4. magnesium — 30
+   5. magnesium supplements — 30
+   6. hair supplements — 23
+   7. collagen supplements — 22
+   8. collagen — 20
+   9. weight loss supplements — 17
+   10. protein supplements — 15
+
+📌 TOPIC: BIOHACKING
+----------------------------------------
+🔥 RISING (going viral):
+   1. biohacking guy — 190%
+   2. biohackers — 170%
+   3. biohacking que es y como funciona — 140%
+   4. what does biohacking mean — 130%
+   5. what is biohacking for women — 130%
+   6. biohacking conference austin — 120%
+   7. dave asprey biohacking conference — 110%
+   8. biohacking conference — 100%
+   9. biohacking definition — 90%
+   10. dave asprey — 50%
+
+📊 TOP SEARCHES:
+   1. biohacking conference — 100
+   2. what is biohacking — 68
+   3. subnautica 2 biohacking — 68
+   4. biohacking chamber subnautica 2 — 43
+   5. peptides — 35
+   6. biohacking conference austin — 32
+   7. biohacking meaning — 32
+   8. dave asprey biohacking — 30
+   9. dave asprey — 26
+   10. biohacking reddit — 23
+
+📌 TOPIC: SUPPLEMENT INGREDIENTS
+----------------------------------------
+🔥 RISING (going viral):
+   No data
+
+📊 TOP SEARCHES:
+   1. emma supplement ingredients — 100
+
+============================================================
+  REDDIT HOT POSTS | May 27, 2026
+============================================================
+
+📌 r/supplements
+----------------------------------------
+   1. Reminder on Community Conduct
+      ⬆️  30 upvotes | 💬 54 comments
+   2. Why are most kids vitamins basically candy and what to look for instead
+      ⬆️  10 upvotes | 💬 15 comments
+   3. Primal Queen put me in ER
+      ⬆️  8 upvotes | 💬 7 comments
+   4. Has anyone tried this protein waiter? Actually curious 🫥
+      ⬆️  27 upvotes | 💬 30 comments
+   5. What are the best supplements for your brain?
+      ⬆️  48 upvotes | 💬 51 comments
+   6. Are there supplements that help suppress dreams?
+      ⬆️  6 upvotes | 💬 25 comments
+   7. Colostrum is everywhere right now — is the hype actually deserved?
+      ⬆️  5 upvotes | 💬 5 comments
+
+📌 r/biohacking
+----------------------------------------
+   1. Welcome to r/Biohacking!
+      ⬆️  34 upvotes | 💬 3 comments
+   2. We are looking for community moderators!
+      ⬆️  2 upvotes | 💬 1 comments
+   3. Tirz/Reta
+      ⬆️  516 upvotes | 💬 108 comments
+   4. Before and After
+      ⬆️  182 upvotes | 💬 64 comments
+   5. Reta &amp; GLOW 70 - 3 Month Progress
+      ⬆️  11 upvotes | 💬 10 comments
+   6. Day 73 Reta transformation. DOWN 50lbs!!!! Progress pics
+      ⬆️  31 upvotes | 💬 14 comments
+   7. Current Stack
+      ⬆️  2 upvotes | 💬 2 comments
+
+📌 r/health
+----------------------------------------
+   1. This is what happens when you defund Ebola prevention
+      ⬆️  81 upvotes | 💬 1 comments
+   2. A 27-year-old woman with extreme cramping lied about having a common colon cancer symptom to get screened sooner. She was later diagnosed at stage 4.
+      ⬆️  1586 upvotes | 💬 51 comments
+   3. The Largest Undocumented Disparity in Maternal Health
+      ⬆️  17 upvotes | 💬 2 comments
+   4. Younger generations not getting healthier, UK study finds
+      ⬆️  18 upvotes | 💬 2 comments
+   5. WHO says Ebola is spreading faster than they can stop it
+      ⬆️  758 upvotes | 💬 95 comments
+   6. Exclusive: Read the Newest Health Care Proposal Being Circulated Among Dems
+      ⬆️  119 upvotes | 💬 19 comments
+   7. Canada suspends admissions of residents of countries hit by Ebola
+      ⬆️  49 upvotes | 💬 2 comments
+
+============================================================
+  YOUTUBE TRENDING VIDEOS | May 27, 2026
+============================================================
+
+📌 Search: supplements 2026
+----------------------------------------
+   ❌ Error: post() got an unexpected keyword argument 'proxies'
+
+📌 Search: biohacking 2026
+----------------------------------------
+   ❌ Error: post() got an unexpected keyword argument 'proxies'
+
+📌 Search: health trends 2026
+----------------------------------------
+   ❌ Error: post() got an unexpected keyword argument 'proxies'
+
+📌 Search: supplement ingredients 2026
+----------------------------------------
+   ❌ Error: post() got an unexpected keyword argument 'proxies'
+
+============================================================
+  AMAZON BESTSELLERS — Vitamins & Supplements | May 27, 2026
+============================================================
+
+   #1. LMNT Zero Sugar Electrolytes - Raspberry Salt | Drink Mix | 30-Count
+   #2. Optimum Nutrition Micronized Creatine Monohydrate Powder, Unflavored, 60 Servings, 300 Grams (Packaging May Vary)
+   #3. Liquid I.V.® Hydration Multiplier - Popsicle Firecracker | Electrolyte Powder Drink Mix | 1 Pack (16 Servings)
+   #4. Nutricost Creatine Monohydrate Micronized Powder 500G, 5000mg Per Serv (5g) - 100 Servings, 17.9 Oz
+   #5. Liquid I.V. Hydration Multiplier Sugar-Free - Lemon Lime | Electrolyte Powder Drink Mix | 1 Pack (14 Servings)
+   #6. Optimum Nutrition Gold Standard 100% Whey Protein Powder, Double Rich Chocolate 1.98 Pound (Packaging May Vary)
+   #7. Quest Nutrition Chocolate Chip Cookie Dough Protein Bars, High Protein, Low Carb, Gluten Free, Keto Friendly, 12 Count
+   #8. Ultima Replenisher Daily Electrolyte Powder – Original Variety Pack, 20 Stickpacks – Zero Sugar Hydration Packets with 6 Electrolytes and Minerals – Sugar Free, Plant Based & Keto Friendly​ Drink Mix
+   #9. Pure Protein Chocolate Deluxe Protein Bars – 21g Protein, 3g Sugar, 190 Calories (12 count) Low Sugar* High Protein Snack - Gluten Free - Perfect for a Healthy Snack
+   #10. THORNE Creatine - Micronized Creatine Monohydrate Powder - Support for Muscles & Cognitive Function* - for Women & Men - Unflavored - NSF Certified for Sport - 5 g per Serving - 90 Servings

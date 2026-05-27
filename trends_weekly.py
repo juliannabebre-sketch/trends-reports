@@ -330,3 +330,13 @@ print(f"   🌐 Saved to: {html_file}")
 print("=" * 60)
 
 os.system(f"open '{html_file}'")
+
+# ── Publish to GitHub Pages ──
+print("\n🚀 Publishing to GitHub Pages...")
+os.system(f"""
+cd /Users/dzulijanna/Documents/TrendsData && \
+git add reports/ && \
+git commit -m "Weekly report {TODAY}" && \
+git push origin main
+""")
+print(f"✅ Published! View at: https://juliannabebre-sketch.github.io/trends-reports/")
