@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trends Reports — Health & Supplements</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #f0f4f8; color: #1a202c; min-height: 100vh;
+}
+.header {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+    color: white; padding: 48px 40px 36px; text-align: center;
+}
+.header h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
+.header p { color: #94a3b8; font-size: 1rem; }
+.container { max-width: 700px; margin: 40px auto; padding: 0 20px; }
+.section-title {
+    font-size: 13px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.8px; color: #64748b; margin-bottom: 12px;
+}
+.report-card {
+    background: white; border-radius: 14px; padding: 20px 24px;
+    margin-bottom: 12px; display: flex; align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    text-decoration: none; color: inherit;
+    border: 1px solid #f1f5f9; transition: all 0.15s;
+}
+.report-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); transform: translateY(-1px); }
+.report-info {}
+.report-type {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.6px; margin-bottom: 4px;
+}
+.report-type.weekly { color: #7c3aed; }
+.report-type.daily  { color: #2563eb; }
+.report-date { font-size: 15px; font-weight: 600; }
+.report-arrow { color: #94a3b8; font-size: 1.2rem; }
+.empty { text-align: center; padding: 60px 20px; color: #94a3b8; font-size: 15px; }
+.footer { text-align: center; padding: 32px; color: #94a3b8; font-size: 13px; }
+</style>
+<script>
+async function loadReports() {
+    const container = document.getElementById('reports');
+    try {
+        const res = await fetch('https://api.github.com/repos/juliannabebre-sketch/trends-reports/contents/reports');
+        const files = await res.json();
+        if (!Array.isArray(files) || files.length === 0) {
+            container.innerHTML = '<div class="empty">No reports yet — first one drops Monday at 11am! 📊</div>';
+            return;
+        }
+        const sorted = files
+            .filter(f => f.name.endsWith('.html'))
+            .sort((a, b) => b.name.localeCompare(a.name));
+
+        const weekly = sorted.filter(f => f.name.startsWith('Weekly'));
+        const daily  = sorted.filter(f => f.name.startsWith('Daily'));
+
+        let html = '';
+        if (weekly.length) {
+            html += '<div class="section-title">📈 Weekly Reports</div>';
+            weekly.forEach(f => {
+                const date = f.name.replace('Weekly_Report_','').replace('.html','');
+                html += `<a class="report-card" href="reports/${f.name}">
+                    <div class="report-info">
+                        <div class="report-type weekly">Weekly Report</div>
+                        <div class="report-date">${formatDate(date)}</div>
+                    </div>
+                    <span class="report-arrow">→</span>
+                </a>`;
+            });
+        }
+        if (daily.length) {
+            html += '<br><div class="section-title">📊 Daily Snapshots</div>';
+            daily.forEach(f => {
+                const date = f.name.replace('Daily_Report_','').replace('.html','');
+                html += `<a class="report-card" href="reports/${f.name}">
+                    <div class="report-info">
+                        <div class="report-type daily">Daily Snapshot</div>
+                        <div class="report-date">${formatDate(date)}</div>
+                    </div>
+                    <span class="report-arrow">→</span>
+                </a>`;
+            });
+        }
+        container.innerHTML = html;
+    } catch(e) {
+        container.innerHTML = '<div class="empty">Loading reports...</div>';
+    }
+}
+
+function formatDate(str) {
+    const d = new Date(str);
+    return d.toLocaleDateString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
+}
+
+loadReports();
+</script>
+</head>
+<body>
+<div class="header">
+    <h1>📊 Trends Reports</h1>
+    <p>Health · Supplements · Biohacking · Ingredients · US Market</p>
+</div>
+<div class="container">
+    <div id="reports"><div class="empty">Loading reports...</div></div>
+</div>
+<div class="footer">Auto-updated daily & weekly · US Market</div>
+</body>
+</html>
