@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Trends Report — May 27, 2026</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f0f4f8;
+    color: #1a202c;
+    line-height: 1.6;
+}
+.header {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+    color: white;
+    padding: 48px 40px 36px;
+    text-align: center;
+}
+.header h1 { font-size: 2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 8px; }
+.header .subtitle { font-size: 1rem; color: #94a3b8; margin-bottom: 16px; }
+.header .meta {
+    display: inline-flex; gap: 20px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 30px; padding: 8px 24px;
+    font-size: 13px; color: #cbd5e1;
+}
+.container { max-width: 1000px; margin: 0 auto; padding: 32px 20px; }
+.platform-section {
+    background: white; border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.04);
+    margin-bottom: 28px; overflow: hidden;
+}
+.platform-header {
+    display: flex; align-items: center; gap: 12px;
+    padding: 18px 24px; font-weight: 700; font-size: 1rem;
+    border-bottom: 1px solid #f1f5f9; color: white;
+}
+.platform-header .icon { font-size: 1.3rem; }
+.platform-body { padding: 20px 24px; }
+.topic-block { margin-bottom: 28px; }
+.topic-block:last-child { margin-bottom: 0; }
+.topic-title {
+    font-size: 13px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.8px; color: #64748b; margin-bottom: 12px;
+    display: flex; align-items: center; gap: 8px;
+}
+.topic-title::after {
+    content: ''; flex: 1; height: 1px; background: #e2e8f0;
+}
+.col-label {
+    font-size: 12px; font-weight: 600; color: #94a3b8;
+    text-transform: uppercase; letter-spacing: 0.6px;
+    margin: 14px 0 8px;
+}
+.query-row {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 8px 12px; border-radius: 8px; margin-bottom: 4px;
+    background: #f8fafc; border: 1px solid #f1f5f9;
+    font-size: 14px;
+}
+.query-row:hover { background: #f1f5f9; }
+.query-num { color: #94a3b8; font-size: 12px; width: 22px; flex-shrink: 0; }
+.query-text { flex: 1; font-weight: 500; }
+.reddit-post {
+    padding: 12px 16px; border-radius: 10px; margin-bottom: 8px;
+    border: 1px solid #f1f5f9; background: #fafafa;
+}
+.reddit-post:hover { background: #f1f5f9; }
+.reddit-post-title { font-weight: 600; font-size: 14px; margin-bottom: 6px; }
+.reddit-meta { display: flex; gap: 10px; font-size: 12px; color: #64748b; }
+.yt-video {
+    padding: 12px 16px; border-radius: 10px; margin-bottom: 8px;
+    border: 1px solid #f1f5f9; background: #fafafa;
+    display: flex; justify-content: space-between; align-items: flex-start;
+}
+.yt-video:hover { background: #f1f5f9; }
+.yt-title { font-weight: 600; font-size: 14px; flex: 1; margin-right: 12px; }
+.yt-link {
+    font-size: 12px; color: #dc2626; text-decoration: none; font-weight: 600;
+    white-space: nowrap;
+}
+.yt-views { font-size: 12px; color: #64748b; margin-top: 4px; }
+.amz-item {
+    padding: 8px 12px; border-radius: 8px; margin-bottom: 4px;
+    background: #fafafa; border: 1px solid #f1f5f9; font-size: 14px;
+    display: flex; align-items: center; gap: 10px;
+}
+.amz-rank {
+    background: #ff9900; color: white; border-radius: 6px;
+    padding: 2px 7px; font-size: 11px; font-weight: 700; flex-shrink: 0;
+}
+/* Commentary */
+.insight-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 600px) { .insight-grid { grid-template-columns: 1fr; } }
+.insight-card {
+    border-radius: 12px; padding: 18px 20px;
+    border-left: 4px solid;
+}
+.insight-card.viral   { background: #fef2f2; border-color: #dc2626; }
+.insight-card.new     { background: #eff6ff; border-color: #3b82f6; }
+.insight-card.steady  { background: #f0fdf4; border-color: #16a34a; }
+.insight-card.cross   { background: #faf5ff; border-color: #7c3aed; }
+.insight-card.tip     { background: #fffbeb; border-color: #d97706; }
+.insight-title { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+.insight-item { font-size: 13px; color: #374151; margin-bottom: 6px; }
+.insight-note { font-size: 12px; color: #6b7280; font-style: italic; margin-top: 4px; }
+.takeaway-section {
+    background: linear-gradient(135deg, #0f172a, #1e3a5f);
+    border-radius: 16px; padding: 28px 28px; margin-top: 8px;
+    color: white;
+}
+.takeaway-section h2 { font-size: 1.1rem; margin-bottom: 18px; color: #e2e8f0; }
+.takeaway-item {
+    display: flex; gap: 14px; margin-bottom: 16px;
+    background: rgba(255,255,255,0.06); border-radius: 10px; padding: 14px 16px;
+}
+.takeaway-num {
+    background: #3b82f6; color: white; border-radius: 8px;
+    width: 28px; height: 28px; display: flex; align-items: center;
+    justify-content: center; font-weight: 700; font-size: 13px; flex-shrink: 0;
+}
+.takeaway-text { font-size: 14px; color: #e2e8f0; }
+.takeaway-text strong { color: white; }
+.footer {
+    text-align: center; padding: 32px 20px; color: #94a3b8; font-size: 13px;
+}
+.no-data { color: #94a3b8; font-size: 13px; font-style: italic; padding: 8px 0; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>📊 Daily Trends Report</h1>
+  <div class="subtitle">Health · Supplements · Biohacking · Ingredients</div>
+  <div class="meta">
+    <span>📅 May 27, 2026</span>
+    <span>🇺🇸 US Market</span>
+    <span>⏱ Last 12 Months</span>
+  </div>
+</div>
+<div class="container">
+  <div class="platform-section">
+    <div class="platform-header" style="background:#4285f4">
+      <span class="icon">🔵</span> Google Trends — Rising &amp; Top Searches
+    </div>
+    <div class="platform-body">
+        <div class="topic-block">
+            <div class="topic-title">health</div>
+            <div class="col-label">🔥 Rising (going viral)</div>
+            <div class="no-data">No data available</div>
+            <div class="col-label">📊 Top Searches</div>
+            <div class="no-data">No data available</div>
+        </div>
+        <div class="topic-block">
+            <div class="topic-title">supplements</div>
+            <div class="col-label">🔥 Rising (going viral)</div>
+            
+            <div class="query-row">
+                <span class="query-num">1</span>
+                <span class="query-text">double wood supplements</span>
+                <span><span style="background:#fffbeb;color:#d97706;border:1px solid #d97706;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;margin-right:6px;">📈 Rising</span><span style="color:#d97706;font-weight:700">300%</span></span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">2</span>
+                <span class="query-text">lymphatic drainage supplements</span>
+                <span><span style="background:#fffbeb;color:#d97706;border:1px solid #d97706;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;margin-right:6px;">📈 Rising</span><span style="color:#d97706;font-weight:700">300%</span></span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">3</span>
+                <span class="query-text">steel supplements</span>
+                <span><span style="background:#fffbeb;color:#d97706;border:1px solid #d97706;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;margin-right:6px;">📈 Rising</span><span style="color:#d97706;font-weight:700">250%</span></span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">4</span>
+                <span class="query-text">vitamin & supplements store near me</span>
+                <span><span style="background:#fffbeb;color:#d97706;border:1px solid #d97706;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;margin-right:6px;">📈 Rising</span><span style="color:#d97706;font-weight:700">250%</span></span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">5</span>
+                <span class="query-text">rho supplements</span>
+                <span><span style="background:#fffbeb;color:#d97706;border:1px solid #d97706;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;margin-right:6px;">📈 Rising</span><span style="color:#d97706;font-weight:700">200%</span></span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">6</span>
+                <span class="query-text">peptide supplements</span>
+                <span><span style="background:#fffbeb;color:#d97706;border:1px solid #d97706;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;margin-right:6px;">📈 Rising</span><span style="color:#d97706;font-weight:700">190%</span></span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">7</span>
+                <span class="query-text">snap supplements</span>
+                <span><span style="background:#fffbeb;color:#d97706;border:1px solid #d97706;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;margin-right:6px;">📈 Rising</span><span style="color:#d97706;font-weight:700">140%</span></span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">8</span>
+                <span class="query-text">peptides</span>
+                <span><span style="background:#ecfdf5;color:#059669;border:1px solid #059669;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;margin-right:6px;">↑ Growing</span><span style="color:#059669;font-weight:700">100%</span></span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">9</span>
+                <span class="query-text">peptides supplements</span>
+                <span><span style="background:#ecfdf5;color:#059669;border:1px solid #059669;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;margin-right:6px;">↑ Growing</span><span style="color:#059669;font-weight:700">80%</span></span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">10</span>
+                <span class="query-text">memory supplements</span>
+                <span><span style="background:#ecfdf5;color:#059669;border:1px solid #059669;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;margin-right:6px;">↑ Growing</span><span style="color:#059669;font-weight:700">80%</span></span>
+            </div>
+            <div class="col-label">📊 Top Searches</div>
+            
+            <div class="query-row">
+                <span class="query-num">1</span>
+                <span class="query-text">best supplements</span>
+                <span style="color:#475569;font-size:13px;font-weight:600">100</span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">2</span>
+                <span class="query-text">iron supplements</span>
+                <span style="color:#475569;font-size:13px;font-weight:600">28</span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">3</span>
+                <span class="query-text">magnesium</span>
+                <span style="color:#475569;font-size:13px;font-weight:600">25</span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">4</span>
+                <span class="query-text">magnesium supplements</span>
+                <span style="color:#475569;font-size:13px;font-weight:600">25</span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">5</span>
+                <span class="query-text">hair supplements</span>
+                <span style="color:#475569;font-size:13px;font-weight:600">20</span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">6</span>
+                <span class="query-text">collagen</span>
+                <span style="color:#475569;font-size:13px;font-weight:600">16</span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">7</span>
+                <span class="query-text">collagen supplements</span>
+                <span style="color:#475569;font-size:13px;font-weight:600">16</span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">8</span>
+                <span class="query-text">protein supplements</span>
+                <span style="color:#475569;font-size:13px;font-weight:600">15</span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">9</span>
+                <span class="query-text">weight loss supplements</span>
+                <span style="color:#475569;font-size:13px;font-weight:600">14</span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">10</span>
+                <span class="query-text">liver supplements</span>
+                <span style="color:#475569;font-size:13px;font-weight:600">12</span>
+            </div>
+        </div>
+        <div class="topic-block">
+            <div class="topic-title">biohacking</div>
+            <div class="col-label">🔥 Rising (going viral)</div>
+            
+            <div class="query-row">
+                <span class="query-num">1</span>
+                <span class="query-text">kristen bell biohacking</span>
+                <span><span style="background:#fef2f2;color:#dc2626;border:1px solid #dc2626;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;margin-right:6px;">🌋 VIRAL</span><span style="color:#dc2626;font-weight:700">77150%</span></span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">2</span>
+                <span class="query-text">what is biohacking in wellness</span>
+                <span><span style="background:#fef2f2;color:#dc2626;border:1px solid #dc2626;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;margin-right:6px;">🌋 VIRAL</span><span style="color:#dc2626;font-weight:700">57400%</span></span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">3</span>
+                <span class="query-text">kristen bell biohacking trick</span>
+                <span><span style="background:#fef2f2;color:#dc2626;border:1px solid #dc2626;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;margin-right:6px;">🌋 VIRAL</span><span style="color:#dc2626;font-weight:700">44200%</span></span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">4</span>
+                <span class="query-text">subnautica 2 biohacking</span>
+                <span><span style="background:#fef2f2;color:#dc2626;border:1px solid #dc2626;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;margin-right:6px;">🌋 VIRAL</span><span style="color:#dc2626;font-weight:700">37250%</span></span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">5</span>
+                <span class="query-text">biohacking chamber subnautica 2</span>
+                <span><span style="background:#fef2f2;color:#dc2626;border:1px solid #dc2626;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;margin-right:6px;">🌋 VIRAL</span><span style="color:#dc2626;font-weight:700">25400%</span></span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">6</span>
+                <span class="query-text">biohacking news</span>
+                <span><span style="background:#fff7ed;color:#ea580c;border:1px solid #ea580c;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;margin-right:6px;">🔥 Explosive</span><span style="color:#ea580c;font-weight:700">2050%</span></span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">7</span>
+                <span class="query-text">examples of biohacking</span>
+                <span><span style="background:#fffbeb;color:#d97706;border:1px solid #d97706;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;margin-right:6px;">📈 Rising</span><span style="color:#d97706;font-weight:700">550%</span></span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">8</span>
+                <span class="query-text">peptides</span>
+                <span><span style="background:#fffbeb;color:#d97706;border:1px solid #d97706;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;margin-right:6px;">📈 Rising</span><span style="color:#d97706;font-weight:700">450%</span></span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">9</span>
+                <span class="query-text">biohacking products</span>
+                <span><span style="background:#fffbeb;color:#d97706;border:1px solid #d97706;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;margin-right:6px;">📈 Rising</span><span style="color:#d97706;font-weight:700">300%</span></span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">10</span>
+                <span class="query-text">what is biohacking health</span>
+                <span><span style="background:#fffbeb;color:#d97706;border:1px solid #d97706;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;margin-right:6px;">📈 Rising</span><span style="color:#d97706;font-weight:700">250%</span></span>
+            </div>
+            <div class="col-label">📊 Top Searches</div>
+            
+            <div class="query-row">
+                <span class="query-num">1</span>
+                <span class="query-text">what is biohacking</span>
+                <span style="color:#475569;font-size:13px;font-weight:600">100</span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">2</span>
+                <span class="query-text">biohacking news</span>
+                <span style="color:#475569;font-size:13px;font-weight:600">46</span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">3</span>
+                <span class="query-text">biohacking meaning</span>
+                <span style="color:#475569;font-size:13px;font-weight:600">44</span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">4</span>
+                <span class="query-text">biohacking definition</span>
+                <span style="color:#475569;font-size:13px;font-weight:600">44</span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">5</span>
+                <span class="query-text">biohacking conference</span>
+                <span style="color:#475569;font-size:13px;font-weight:600">40</span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">6</span>
+                <span class="query-text">biohacking reddit</span>
+                <span style="color:#475569;font-size:13px;font-weight:600">34</span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">7</span>
+                <span class="query-text">peptides</span>
+                <span style="color:#475569;font-size:13px;font-weight:600">24</span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">8</span>
+                <span class="query-text">biohacking supplements</span>
+                <span style="color:#475569;font-size:13px;font-weight:600">23</span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">9</span>
+                <span class="query-text">biohacking for women</span>
+                <span style="color:#475569;font-size:13px;font-weight:600">19</span>
+            </div>
+            <div class="query-row">
+                <span class="query-num">10</span>
+                <span class="query-text">biohacking products</span>
+                <span style="color:#475569;font-size:13px;font-weight:600">18</span>
+            </div>
+        </div>
+        <div class="topic-block">
+            <div class="topic-title">supplement ingredients</div>
+            <div class="col-label">🔥 Rising (going viral)</div>
+            <div class="no-data">No data available</div>
+            <div class="col-label">📊 Top Searches</div>
+            <div class="no-data">No data available</div>
+        </div></div>
+  </div>
+  <div class="platform-section">
+    <div class="platform-header" style="background:#ff4500">
+      <span class="icon">🟠</span> Reddit Hot Posts
+    </div>
+    <div class="platform-body">
+        <div class="topic-block">
+            <div class="topic-title">r/supplements</div>
+            
+            <div class="reddit-post">
+                <div class="reddit-post-title">Magnesium in your 30s</div>
+                <div class="reddit-meta">
+                    <span style="background:#fff7ed;color:#ea580c;border:1px solid #ea580c;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">⬆ 1,868</span>
+                    <span>💬 171 comments</span>
+                </div>
+            </div>
+            <div class="reddit-post">
+                <div class="reddit-post-title">L-theanine is life changing</div>
+                <div class="reddit-meta">
+                    <span style="background:#fff7ed;color:#ea580c;border:1px solid #ea580c;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">⬆ 1,745</span>
+                    <span>💬 435 comments</span>
+                </div>
+            </div>
+            <div class="reddit-post">
+                <div class="reddit-post-title">What was the Closest Thing You Found to "the Vitamin"</div>
+                <div class="reddit-meta">
+                    <span style="background:#fff7ed;color:#ea580c;border:1px solid #ea580c;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">⬆ 1,599</span>
+                    <span>💬 358 comments</span>
+                </div>
+            </div>
+            <div class="reddit-post">
+                <div class="reddit-post-title">15 g of creatine daily has changed my life</div>
+                <div class="reddit-meta">
+                    <span style="background:#fff7ed;color:#ea580c;border:1px solid #ea580c;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">⬆ 1,539</span>
+                    <span>💬 660 comments</span>
+                </div>
+            </div>
+            <div class="reddit-post">
+                <div class="reddit-post-title">The supplement approach that finally calmed my skin (after years of trying everything else)</div>
+                <div class="reddit-meta">
+                    <span style="background:#fff7ed;color:#ea580c;border:1px solid #ea580c;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">⬆ 1,463</span>
+                    <span>💬 375 comments</span>
+                </div>
+            </div>
+            <div class="reddit-post">
+                <div class="reddit-post-title">I stopped all supplements after bloodwork. Warning!</div>
+                <div class="reddit-meta">
+                    <span style="background:#fff7ed;color:#ea580c;border:1px solid #ea580c;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">⬆ 1,261</span>
+                    <span>💬 524 comments</span>
+                </div>
+            </div>
+            <div class="reddit-post">
+                <div class="reddit-post-title">The "5g per day" creatine recommendation is based on muscle research. Here's what the latest brain studies say.</div>
+                <div class="reddit-meta">
+                    <span style="background:#fff7ed;color:#ea580c;border:1px solid #ea580c;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">⬆ 1,241</span>
+                    <span>💬 367 comments</span>
+                </div>
+            </div>
+        </div>
+        <div class="topic-block">
+            <div class="topic-title">r/biohacking</div>
+            
+            <div class="reddit-post">
+                <div class="reddit-post-title">My peptide stash!</div>
+                <div class="reddit-meta">
+                    <span style="background:#fff7ed;color:#ea580c;border:1px solid #ea580c;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">⬆ 1,157</span>
+                    <span>💬 594 comments</span>
+                </div>
+            </div>
+            <div class="reddit-post">
+                <div class="reddit-post-title">3 months Glp3 result - 48M</div>
+                <div class="reddit-meta">
+                    <span style="background:#fff7ed;color:#ea580c;border:1px solid #ea580c;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">⬆ 717</span>
+                    <span>💬 198 comments</span>
+                </div>
+            </div>
+            <div class="reddit-post">
+                <div class="reddit-post-title">6 months results so far r3ta 260-185</div>
+                <div class="reddit-meta">
+                    <span style="background:#fff7ed;color:#ea580c;border:1px solid #ea580c;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">⬆ 682</span>
+                    <span>💬 130 comments</span>
+                </div>
+            </div>
+            <div class="reddit-post">
+                <div class="reddit-post-title">Tirz - Reta switch. And Reta dosing advice</div>
+                <div class="reddit-meta">
+                    <span style="background:#fff7ed;color:#ea580c;border:1px solid #ea580c;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">⬆ 675</span>
+                    <span>💬 605 comments</span>
+                </div>
+            </div>
+            <div class="reddit-post">
+                <div class="reddit-post-title">This is a before and after… 7 months on Reta, BPC157, TB500, Tesa, MOTS-C, GHK-cu, Selank, Semax, and TRT, along with an intense diet. Down 110lbs. 48” waist to 27”.</div>
+                <div class="reddit-meta">
+                    <span style="background:#fff7ed;color:#ea580c;border:1px solid #ea580c;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">⬆ 672</span>
+                    <span>💬 852 comments</span>
+                </div>
+            </div>
+            <div class="reddit-post">
+                <div class="reddit-post-title">3 Months on Retatrutide My Honest Journey Starting weight: 87kg</div>
+                <div class="reddit-meta">
+                    <span style="background:#fff7ed;color:#ea580c;border:1px solid #ea580c;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">⬆ 663</span>
+                    <span>💬 200 comments</span>
+                </div>
+            </div>
+            <div class="reddit-post">
+                <div class="reddit-post-title">3 month Reta progress</div>
+                <div class="reddit-meta">
+                    <span style="background:#fff7ed;color:#ea580c;border:1px solid #ea580c;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">⬆ 627</span>
+                    <span>💬 242 comments</span>
+                </div>
+            </div>
+        </div>
+        <div class="topic-block">
+            <div class="topic-title">r/health</div>
+            
+            <div class="reddit-post">
+                <div class="reddit-post-title">The deaths of Catherine O'Hara and James Van Der Beek were tied to colorectal cancer. Here's what it is and what to look out for</div>
+                <div class="reddit-meta">
+                    <span style="background:#fff7ed;color:#ea580c;border:1px solid #ea580c;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">⬆ 1,793</span>
+                    <span>💬 111 comments</span>
+                </div>
+            </div>
+            <div class="reddit-post">
+                <div class="reddit-post-title">A 27-year-old woman with extreme cramping lied about having a common colon cancer symptom to get screened sooner. She was later diagnosed at stage 4.</div>
+                <div class="reddit-meta">
+                    <span style="background:#fff7ed;color:#ea580c;border:1px solid #ea580c;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">⬆ 1,606</span>
+                    <span>💬 51 comments</span>
+                </div>
+            </div>
+            <div class="reddit-post">
+                <div class="reddit-post-title">RFK Jr. and Trump silenced a groundbreaking report on cancer and alcohol</div>
+                <div class="reddit-meta">
+                    <span style="background:#fff7ed;color:#ea580c;border:1px solid #ea580c;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">⬆ 1,513</span>
+                    <span>💬 63 comments</span>
+                </div>
+            </div>
+            <div class="reddit-post">
+                <div class="reddit-post-title">America’s leading physician groups are now openly defying RFK Jr.</div>
+                <div class="reddit-meta">
+                    <span style="background:#fff7ed;color:#ea580c;border:1px solid #ea580c;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">⬆ 1,442</span>
+                    <span>💬 50 comments</span>
+                </div>
+            </div>
+            <div class="reddit-post">
+                <div class="reddit-post-title">Parents of decapitated baby awarded $2.2 million against doctor after autopsy photos posted online</div>
+                <div class="reddit-meta">
+                    <span style="background:#fff7ed;color:#ea580c;border:1px solid #ea580c;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">⬆ 1,421</span>
+                    <span>💬 382 comments</span>
+                </div>
+            </div>
+            <div class="reddit-post">
+                <div class="reddit-post-title">Texas woman with Stage 3 cancer sees her insurance premium rise over 700 percent: ‘I’m going to die’</div>
+                <div class="reddit-meta">
+                    <span style="background:#fff7ed;color:#ea580c;border:1px solid #ea580c;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">⬆ 1,391</span>
+                    <span>💬 74 comments</span>
+                </div>
+            </div>
+            <div class="reddit-post">
+                <div class="reddit-post-title">Polling Suggests The Country Is Absolutely Done With RFK Jr.</div>
+                <div class="reddit-meta">
+                    <span style="background:#fff7ed;color:#ea580c;border:1px solid #ea580c;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">⬆ 1,322</span>
+                    <span>💬 52 comments</span>
+                </div>
+            </div>
+        </div></div>
+  </div>
+  <div class="platform-section">
+    <div class="platform-header" style="background:#dc2626">
+      <span class="icon">🔴</span> YouTube Trending Videos
+    </div>
+    <div class="platform-body"></div>
+  </div>
+  <div class="platform-section">
+    <div class="platform-header" style="background:#b45309">
+      <span class="icon">🟡</span> Amazon Bestsellers — Vitamins &amp; Supplements
+    </div>
+    <div class="platform-body"><div class="amz-item"><span class="amz-rank">#1</span>LMNT Zero Sugar Electrolytes - Raspberry Salt | Drink Mix | 30-Count</div><div class="amz-item"><span class="amz-rank">#2</span>Optimum Nutrition Micronized Creatine Monohydrate Powder, Unflavored, 60 Servings, 300 Grams (Packaging May Vary)</div><div class="amz-item"><span class="amz-rank">#3</span>Liquid I.V.® Hydration Multiplier - Popsicle Firecracker | Electrolyte Powder Drink Mix | 1 Pack (16 Servings)</div><div class="amz-item"><span class="amz-rank">#4</span>Nutricost Creatine Monohydrate Micronized Powder 500G, 5000mg Per Serv (5g) - 100 Servings, 17.9 Oz</div><div class="amz-item"><span class="amz-rank">#5</span>Liquid I.V. Hydration Multiplier Sugar-Free - Lemon Lime | Electrolyte Powder Drink Mix | 1 Pack (14 Servings)</div><div class="amz-item"><span class="amz-rank">#6</span>Optimum Nutrition Gold Standard 100% Whey Protein Powder, Double Rich Chocolate 1.98 Pound (Packaging May Vary)</div><div class="amz-item"><span class="amz-rank">#7</span>Quest Nutrition Chocolate Chip Cookie Dough Protein Bars, High Protein, Low Carb, Gluten Free, Keto Friendly, 12 Count</div><div class="amz-item"><span class="amz-rank">#8</span>Ultima Replenisher Daily Electrolyte Powder – Original Variety Pack, 20 Stickpacks – Zero Sugar Hydration Packets with 6 Electrolytes and Minerals – Sugar Free, Plant Based & Keto Friendly​ Drink Mix</div><div class="amz-item"><span class="amz-rank">#9</span>Pure Protein Chocolate Deluxe Protein Bars – 21g Protein, 3g Sugar, 190 Calories (12 count) Low Sugar* High Protein Snack - Gluten Free - Perfect for a Healthy Snack</div><div class="amz-item"><span class="amz-rank">#10</span>THORNE Creatine - Micronized Creatine Monohydrate Powder - Support for Muscles & Cognitive Function* - for Women & Men - Unflavored - NSF Certified for Sport - 5 g per Serving - 90 Servings</div></div>
+  </div>
+</div>
+<div class="footer">Generated automatically · US Market · May 27, 2026</div>
+</body>
+</html>
