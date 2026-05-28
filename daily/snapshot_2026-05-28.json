@@ -1,0 +1,462 @@
+{
+  "date": "2026-05-28",
+  "google": {
+    "health": {
+      "rising": [
+        {
+          "query": "google health app",
+          "value": 250
+        },
+        {
+          "query": "willis homes public health alert",
+          "value": 160
+        },
+        {
+          "query": "trump health",
+          "value": 70
+        },
+        {
+          "query": "google health",
+          "value": 60
+        },
+        {
+          "query": "battery health check iphone",
+          "value": 60
+        },
+        {
+          "query": "how to check hard drive health",
+          "value": 50
+        },
+        {
+          "query": "how to check laptop battery health",
+          "value": 40
+        },
+        {
+          "query": "how to improve gut health",
+          "value": 40
+        },
+        {
+          "query": "how to check ssd health",
+          "value": 40
+        }
+      ],
+      "top": [
+        {
+          "query": "mental health",
+          "value": 100
+        },
+        {
+          "query": "health insurance",
+          "value": 85
+        },
+        {
+          "query": "health department",
+          "value": 33
+        },
+        {
+          "query": "behavioral health",
+          "value": 32
+        },
+        {
+          "query": "google health",
+          "value": 22
+        },
+        {
+          "query": "united health",
+          "value": 18
+        },
+        {
+          "query": "texas health",
+          "value": 16
+        },
+        {
+          "query": "home health care",
+          "value": 12
+        },
+        {
+          "query": "cvs health",
+          "value": 11
+        },
+        {
+          "query": "womens health",
+          "value": 9
+        }
+      ]
+    },
+    "supplements": {
+      "rising": [
+        {
+          "query": "jym supplements",
+          "value": 90
+        }
+      ],
+      "top": [
+        {
+          "query": "best supplements",
+          "value": 100
+        },
+        {
+          "query": "supplement",
+          "value": 46
+        },
+        {
+          "query": "iron supplements",
+          "value": 39
+        },
+        {
+          "query": "magnesium",
+          "value": 32
+        },
+        {
+          "query": "magnesium supplements",
+          "value": 32
+        },
+        {
+          "query": "hair supplements",
+          "value": 25
+        },
+        {
+          "query": "collagen supplements",
+          "value": 21
+        },
+        {
+          "query": "collagen",
+          "value": 21
+        },
+        {
+          "query": "weight loss supplements",
+          "value": 16
+        },
+        {
+          "query": "protein supplements",
+          "value": 16
+        }
+      ]
+    },
+    "biohacking": {
+      "rising": [
+        {
+          "query": "botanical biohacking",
+          "value": 51100
+        },
+        {
+          "query": "what is biohacking for women",
+          "value": 140
+        },
+        {
+          "query": "dave asprey biohacking conference",
+          "value": 140
+        },
+        {
+          "query": "dave asprey biohacking",
+          "value": 130
+        },
+        {
+          "query": "dave asprey",
+          "value": 130
+        },
+        {
+          "query": "biohacking definition",
+          "value": 100
+        },
+        {
+          "query": "biohacking conference",
+          "value": 90
+        },
+        {
+          "query": "biohacking for women",
+          "value": 80
+        },
+        {
+          "query": "what does biohacking mean",
+          "value": 60
+        }
+      ],
+      "top": [
+        {
+          "query": "biohacking conference",
+          "value": 100
+        },
+        {
+          "query": "what is biohacking",
+          "value": 62
+        },
+        {
+          "query": "subnautica 2 biohacking",
+          "value": 52
+        },
+        {
+          "query": "subnautica 2 biohacking chamber",
+          "value": 37
+        },
+        {
+          "query": "dave asprey",
+          "value": 36
+        },
+        {
+          "query": "dave asprey biohacking",
+          "value": 35
+        },
+        {
+          "query": "peptides",
+          "value": 29
+        },
+        {
+          "query": "biohacking meaning",
+          "value": 27
+        },
+        {
+          "query": "dave asprey biohacking conference",
+          "value": 24
+        },
+        {
+          "query": "biohacking reddit",
+          "value": 18
+        }
+      ]
+    },
+    "supplement ingredients": {
+      "rising": [
+        {
+          "query": "emma supplement ingredients",
+          "value": 70
+        }
+      ],
+      "top": [
+        {
+          "query": "emma supplement ingredients",
+          "value": 100
+        }
+      ]
+    }
+  },
+  "reddit": {
+    "supplements": [
+      {
+        "title": "Reminder on Community Conduct",
+        "score": 34,
+        "comments": 54,
+        "url": "https://reddit.com/r/Supplements/comments/1ndwthg/reminder_on_community_conduct/"
+      },
+      {
+        "title": "Do you make your own electrolyte formula at home? It's so much cheaper.",
+        "score": 33,
+        "comments": 18,
+        "url": "https://reddit.com/r/Supplements/comments/1tphz3u/do_you_make_your_own_electrolyte_formula_at_home/"
+      },
+      {
+        "title": "are there decent supplements that help with depression?",
+        "score": 8,
+        "comments": 29,
+        "url": "https://reddit.com/r/Supplements/comments/1tpq4f5/are_there_decent_supplements_that_help_with/"
+      },
+      {
+        "title": "Vitamins for Skin/Hair that are actually worth it",
+        "score": 23,
+        "comments": 26,
+        "url": "https://reddit.com/r/Supplements/comments/1tpgde6/vitamins_for_skinhair_that_are_actually_worth_it/"
+      },
+      {
+        "title": "Hyped and famous supplement that DIDN'T work for you",
+        "score": 12,
+        "comments": 42,
+        "url": "https://reddit.com/r/Supplements/comments/1tpktln/hyped_and_famous_supplement_that_didnt_work_for/"
+      },
+      {
+        "title": "Best hangover cure??",
+        "score": 13,
+        "comments": 72,
+        "url": "https://reddit.com/r/Supplements/comments/1tpemup/best_hangover_cure/"
+      },
+      {
+        "title": "Why are most kids vitamins basically candy and what to look for instead",
+        "score": 22,
+        "comments": 24,
+        "url": "https://reddit.com/r/Supplements/comments/1tp884g/why_are_most_kids_vitamins_basically_candy_and/"
+      }
+    ],
+    "biohacking": [
+      {
+        "title": "Welcome to r/Biohacking!",
+        "score": 33,
+        "comments": 4,
+        "url": "https://reddit.com/r/Biohacking/comments/1li3nki/welcome_to_rbiohacking/"
+      },
+      {
+        "title": "We are looking for community moderators!",
+        "score": 2,
+        "comments": 1,
+        "url": "https://reddit.com/r/Biohacking/comments/1td0mpa/we_are_looking_for_community_moderators/"
+      },
+      {
+        "title": "260 \u27a1\ufe0f 198 (Reta/Tesa/Mot-c/IGF1-LR3/BPC-157/TB-500)",
+        "score": 8,
+        "comments": 4,
+        "url": "https://reddit.com/r/Biohacking/comments/1tpsqay/260_198_retatesamotcigf1lr3bpc157tb500/"
+      },
+      {
+        "title": "Tirz/Reta",
+        "score": 833,
+        "comments": 189,
+        "url": "https://reddit.com/r/Biohacking/comments/1toqi8c/tirzreta/"
+      },
+      {
+        "title": "Reta &amp; GLOW 70 - 3 Month Progress",
+        "score": 47,
+        "comments": 27,
+        "url": "https://reddit.com/r/Biohacking/comments/1tp6glo/reta_glow_70_3_month_progress/"
+      },
+      {
+        "title": "Before and After",
+        "score": 273,
+        "comments": 91,
+        "url": "https://reddit.com/r/Biohacking/comments/1tot41c/before_and_after/"
+      },
+      {
+        "title": "Anyone else find this crazy?",
+        "score": 23,
+        "comments": 131,
+        "url": "https://reddit.com/r/Biohacking/comments/1tpaifn/anyone_else_find_this_crazy/"
+      }
+    ],
+    "health": [
+      {
+        "title": "Rubio says US cannot allow any Ebola cases to enter the country",
+        "score": 278,
+        "comments": 50,
+        "url": "https://reddit.com/r/Health/comments/1tpc2bi/rubio_says_us_cannot_allow_any_ebola_cases_to/"
+      },
+      {
+        "title": "This is what happens when you defund Ebola prevention",
+        "score": 223,
+        "comments": 1,
+        "url": "https://reddit.com/r/Health/comments/1tp6705/this_is_what_happens_when_you_defund_ebola/"
+      },
+      {
+        "title": "US CDC seeks staff for Ebola screening as outbreak response expands",
+        "score": 29,
+        "comments": 3,
+        "url": "https://reddit.com/r/Health/comments/1tpmp2n/us_cdc_seeks_staff_for_ebola_screening_as/"
+      },
+      {
+        "title": "This Toronto cosmetic clinic had 24 cameras watching patients. Here's why that will cost them $22.5 million",
+        "score": 24,
+        "comments": 1,
+        "url": "https://reddit.com/r/Health/comments/1tpn80b/this_toronto_cosmetic_clinic_had_24_cameras/"
+      },
+      {
+        "title": "Researchers found PFAS contamination in up to 50% of California surface water samples",
+        "score": 30,
+        "comments": 0,
+        "url": "https://reddit.com/r/Health/comments/1tpbzhm/researchers_found_pfas_contamination_in_up_to_50/"
+      },
+      {
+        "title": "The Largest Undocumented Disparity in Maternal Health",
+        "score": 38,
+        "comments": 3,
+        "url": "https://reddit.com/r/Health/comments/1tp6pg0/the_largest_undocumented_disparity_in_maternal/"
+      },
+      {
+        "title": "A 27-year-old woman with extreme cramping lied about having a common colon cancer symptom to get screened sooner. She was later diagnosed at stage 4.",
+        "score": 1715,
+        "comments": 56,
+        "url": "https://reddit.com/r/Health/comments/1toe77q/a_27yearold_woman_with_extreme_cramping_lied/"
+      }
+    ]
+  },
+  "youtube": {
+    "supplements 2026": [
+      {
+        "title": "If I had to Start Over, This is my 2026 Supplement List",
+        "views": "95,374 views",
+        "link": "https://www.youtube.com/watch?v=2L3n13C0s4k"
+      },
+      {
+        "title": "Doctor Reveals the ONLY 6 Supplements Worth Your Money!",
+        "views": "228,376 views",
+        "link": "https://www.youtube.com/watch?v=yp_gfAE3XSs"
+      },
+      {
+        "title": "Top 10 ADHD Supplements That ACTUALLY Work In 2026",
+        "views": "3,437 views",
+        "link": "https://www.youtube.com/watch?v=eCE6WKRRhW0"
+      },
+      {
+        "title": "The Muscle-Building Supplements That ACTUALLY Work",
+        "views": "711,535 views",
+        "link": "https://www.youtube.com/watch?v=XPDzypsisI4"
+      },
+      {
+        "title": "The Best Supplements For Muscle Growth And Health",
+        "views": "4,517,797 views",
+        "link": "https://www.youtube.com/watch?v=He_-f1ZCCJE"
+      }
+    ],
+    "health trends 2026": [
+      {
+        "title": "2026 health trends I\u2019m actually doing (and the ones I\u2019ll skip)",
+        "views": "23,092 views",
+        "link": "https://www.youtube.com/watch?v=xXoUx6W7dJg"
+      },
+      {
+        "title": "These Health Trends Need to Die in 2026 (and these don\u2019t)",
+        "views": "190,703 views",
+        "link": "https://www.youtube.com/watch?v=4mbHKUtvA08"
+      },
+      {
+        "title": "Top Health Trends of 2026: GLP-1 Expansion, AI Wearables, More",
+        "views": "5,612 views",
+        "link": "https://www.youtube.com/watch?v=7xCB2Dp1Ex8"
+      },
+      {
+        "title": "5 Health Trends That Will Define 2026 (AI, Biomarkers, Longevity Training)",
+        "views": "2,614 views",
+        "link": "https://www.youtube.com/watch?v=usXEzNu8TGo"
+      },
+      {
+        "title": "Health Trends Have NEVER Been DUMBER",
+        "views": "117,147 views",
+        "link": "https://www.youtube.com/watch?v=G2C42yZ7ptA"
+      }
+    ],
+    "supplement ingredients 2026": [
+      {
+        "title": "Memopezil Review 2026: Does It Really Work? Brain Support Supplement Tested",
+        "views": "9,220 views",
+        "link": "https://www.youtube.com/watch?v=Gs_jZDhsM8A"
+      },
+      {
+        "title": "NMN vs NR vs NAD+ | The Shocking Truth About Longevity Supplements | 2026 Science Explained",
+        "views": "333 views",
+        "link": "https://www.youtube.com/watch?v=64bYNuFM1vU"
+      },
+      {
+        "title": "5 Best Brain Supplements in 2026: Clinically Dosed for Focus & Cognitive Performance",
+        "views": "82 views",
+        "link": "https://www.youtube.com/watch?v=M1EfI07xV_U"
+      },
+      {
+        "title": "Tradesman Nutrition Review: Supplement Ingredients & Product Overview 2026",
+        "views": "5 views",
+        "link": "https://www.youtube.com/watch?v=7sZIFxi_0i8"
+      },
+      {
+        "title": "What Supplements Are Pro Cyclists ACTUALLY Using In 2026?",
+        "views": "160,821 views",
+        "link": "https://www.youtube.com/watch?v=oW_oC6DyYhI"
+      }
+    ]
+  },
+  "amazon": [
+    "LMNT Zero Sugar Electrolytes - Raspberry Salt | Drink Mix | 30-Count",
+    "Optimum Nutrition Micronized Creatine Monohydrate Powder, Unflavored, 60 Servings, 300 Grams (Packaging May Vary)",
+    "Liquid I.V.\u00ae Hydration Multiplier - Popsicle Firecracker | Electrolyte Powder Drink Mix | 1 Pack (16 Servings)",
+    "Nutricost Creatine Monohydrate Micronized Powder 500G, 5000mg Per Serv (5g) - 100 Servings, 17.9 Oz",
+    "Liquid I.V. Hydration Multiplier Sugar-Free - Lemon Lime | Electrolyte Powder Drink Mix | 1 Pack (14 Servings)",
+    "Optimum Nutrition Gold Standard 100% Whey Protein Powder, Double Rich Chocolate 1.98 Pound (Packaging May Vary)",
+    "Quest Nutrition Chocolate Chip Cookie Dough Protein Bars, High Protein, Low Carb, Gluten Free, Keto Friendly, 12 Count",
+    "Ultima Replenisher Daily Electrolyte Powder \u2013 Original Variety Pack, 20 Stickpacks \u2013 Zero Sugar Hydration Packets with 6 Electrolytes and Minerals \u2013 Sugar Free, Plant Based & Keto Friendly\u200b Drink Mix",
+    "Pure Protein Chocolate Deluxe Protein Bars \u2013 21g Protein, 3g Sugar, 190 Calories (12 count) Low Sugar* High Protein Snack - Gluten Free - Perfect for a Healthy Snack",
+    "THORNE Creatine - Micronized Creatine Monohydrate Powder - Support for Muscles & Cognitive Function* - for Women & Men - Unflavored - NSF Certified for Sport - 5 g per Serving - 90 Servings"
+  ]
+}

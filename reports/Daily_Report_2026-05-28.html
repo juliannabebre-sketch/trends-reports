@@ -167,8 +167,47 @@ body {
   display: flex; align-items: center; gap: 10px;
   padding: 9px 12px; border-radius: 10px; margin-bottom: 5px;
   background: #f8fafc; border: 1px solid #f1f5f9; transition: all 0.15s;
+  text-decoration: none; color: inherit;
 }
 .query-row:hover { background: #eff6ff; border-color: #bfdbfe; transform: translateX(2px); }
+
+/* VIRAL ROW — clickable with glow */
+a.query-row.viral-row {
+  background: linear-gradient(135deg, #fff5f5, #fff7ed);
+  border: 1.5px solid #fca5a5;
+  cursor: pointer; position: relative;
+}
+a.query-row.viral-row:hover {
+  background: linear-gradient(135deg, #fef2f2, #fff7ed);
+  border-color: #f87171;
+  transform: translateX(3px);
+  box-shadow: 0 4px 14px rgba(220,38,38,0.12);
+}
+a.query-row.explosive-row {
+  background: linear-gradient(135deg, #fff7ed, #fffbeb);
+  border: 1.5px solid #fb923c;
+}
+a.query-row.explosive-row:hover {
+  border-color: #f97316;
+  box-shadow: 0 4px 14px rgba(249,115,22,0.12);
+  transform: translateX(3px);
+}
+.why-btn {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 11px; font-weight: 700; padding: 4px 10px;
+  border-radius: 8px; white-space: nowrap; flex-shrink: 0;
+  text-decoration: none; transition: all 0.15s;
+}
+.why-news { background: #fef2f2; color: #dc2626; border: 1px solid #fca5a5; }
+.why-news:hover { background: #dc2626; color: white; }
+.why-trends { background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; margin-left: 4px; }
+.why-trends:hover { background: #2563eb; color: white; }
+.viral-pulse {
+  width: 8px; height: 8px; border-radius: 50%; background: #dc2626;
+  flex-shrink: 0; animation: vpulse 1.5s ease-in-out infinite;
+}
+@keyframes vpulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.4)} }
+
 .q-num {
   color: #c7d2fe; font-size: 11px; font-weight: 800; width: 20px;
   flex-shrink: 0; text-align: center;
@@ -178,6 +217,19 @@ body {
   font-size: 12px; font-weight: 700; color: #4f46e5;
   background: #eef2ff; padding: 2px 8px; border-radius: 6px;
 }
+
+/* BACK TO HOME LINK */
+.back-bar {
+  background: #0f172a; padding: 12px 28px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.back-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: #94a3b8; font-size: 13px; font-weight: 600;
+  text-decoration: none; transition: color 0.15s;
+}
+.back-link:hover { color: #a78bfa; }
+.back-site { color: #475569; font-size: 12px; }
 
 /* REDDIT CARDS */
 .reddit-card {
@@ -314,6 +366,12 @@ body {
 </style>
 </head>
 <body>
+<div class="back-bar">
+  <a class="back-link" href="https://juliannabebre-sketch.github.io/trends-reports/">
+    ← All Reports
+  </a>
+  <span class="back-site">🇺🇸 US Market Intelligence</span>
+</div>
 
 <div class="hero">
   <div class="hero-inner">
@@ -357,10 +415,10 @@ body {
           <div class="topic-name">health</div>
           <div class="col-head">🔥 Rising</div>
           
-            <div class="query-row">
-              <span class="q-num">1</span>
-              <span class="q-text">google health app</span>
-              
+                <div class="query-row">
+                  <span class="q-num">1</span>
+                  <span class="q-text">google health app</span>
+                  
     <div style="display:flex;align-items:center;gap:10px;min-width:180px">
       <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
         <div style="width:50%;height:100%;background:#65a30d;border-radius:10px;"></div>
@@ -368,11 +426,11 @@ body {
       <span style="font-size:11px;font-weight:700;color:#65a30d;white-space:nowrap">+250%</span>
       <span style="font-size:10px;background:#65a30d18;color:#65a30d;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">📈 Rising</span>
     </div>
-            </div>
-            <div class="query-row">
-              <span class="q-num">2</span>
-              <span class="q-text">willis homes public health alert</span>
-              
+                </div>
+                <div class="query-row">
+                  <span class="q-num">2</span>
+                  <span class="q-text">willis homes public health alert</span>
+                  
     <div style="display:flex;align-items:center;gap:10px;min-width:180px">
       <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
         <div style="width:50%;height:100%;background:#65a30d;border-radius:10px;"></div>
@@ -380,11 +438,11 @@ body {
       <span style="font-size:11px;font-weight:700;color:#65a30d;white-space:nowrap">+160%</span>
       <span style="font-size:10px;background:#65a30d18;color:#65a30d;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">📈 Rising</span>
     </div>
-            </div>
-            <div class="query-row">
-              <span class="q-num">3</span>
-              <span class="q-text">trump health</span>
-              
+                </div>
+                <div class="query-row">
+                  <span class="q-num">3</span>
+                  <span class="q-text">trump health</span>
+                  
     <div style="display:flex;align-items:center;gap:10px;min-width:180px">
       <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
         <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
@@ -392,11 +450,11 @@ body {
       <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+70%</span>
       <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
     </div>
-            </div>
-            <div class="query-row">
-              <span class="q-num">4</span>
-              <span class="q-text">google health</span>
-              
+                </div>
+                <div class="query-row">
+                  <span class="q-num">4</span>
+                  <span class="q-text">google health</span>
+                  
     <div style="display:flex;align-items:center;gap:10px;min-width:180px">
       <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
         <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
@@ -404,11 +462,11 @@ body {
       <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+60%</span>
       <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
     </div>
-            </div>
-            <div class="query-row">
-              <span class="q-num">5</span>
-              <span class="q-text">battery health check iphone</span>
-              
+                </div>
+                <div class="query-row">
+                  <span class="q-num">5</span>
+                  <span class="q-text">battery health check iphone</span>
+                  
     <div style="display:flex;align-items:center;gap:10px;min-width:180px">
       <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
         <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
@@ -416,11 +474,11 @@ body {
       <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+60%</span>
       <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
     </div>
-            </div>
-            <div class="query-row">
-              <span class="q-num">6</span>
-              <span class="q-text">how to check hard drive health</span>
-              
+                </div>
+                <div class="query-row">
+                  <span class="q-num">6</span>
+                  <span class="q-text">how to check hard drive health</span>
+                  
     <div style="display:flex;align-items:center;gap:10px;min-width:180px">
       <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
         <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
@@ -428,11 +486,11 @@ body {
       <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+50%</span>
       <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
     </div>
-            </div>
-            <div class="query-row">
-              <span class="q-num">7</span>
-              <span class="q-text">how to check laptop battery health</span>
-              
+                </div>
+                <div class="query-row">
+                  <span class="q-num">7</span>
+                  <span class="q-text">how to check laptop battery health</span>
+                  
     <div style="display:flex;align-items:center;gap:10px;min-width:180px">
       <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
         <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
@@ -440,11 +498,11 @@ body {
       <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+40%</span>
       <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
     </div>
-            </div>
-            <div class="query-row">
-              <span class="q-num">8</span>
-              <span class="q-text">how to improve gut health</span>
-              
+                </div>
+                <div class="query-row">
+                  <span class="q-num">8</span>
+                  <span class="q-text">how to improve gut health</span>
+                  
     <div style="display:flex;align-items:center;gap:10px;min-width:180px">
       <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
         <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
@@ -452,11 +510,11 @@ body {
       <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+40%</span>
       <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
     </div>
-            </div>
-            <div class="query-row">
-              <span class="q-num">9</span>
-              <span class="q-text">how to check ssd health</span>
-              
+                </div>
+                <div class="query-row">
+                  <span class="q-num">9</span>
+                  <span class="q-text">how to check ssd health</span>
+                  
     <div style="display:flex;align-items:center;gap:10px;min-width:180px">
       <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
         <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
@@ -464,7 +522,7 @@ body {
       <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+40%</span>
       <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
     </div>
-            </div>
+                </div>
           <div class="col-head">📊 Top Searches</div>
           
             <div class="query-row">
@@ -522,10 +580,10 @@ body {
           <div class="topic-name">supplements</div>
           <div class="col-head">🔥 Rising</div>
           
-            <div class="query-row">
-              <span class="q-num">1</span>
-              <span class="q-text">jym supplements</span>
-              
+                <div class="query-row">
+                  <span class="q-num">1</span>
+                  <span class="q-text">jym supplements</span>
+                  
     <div style="display:flex;align-items:center;gap:10px;min-width:180px">
       <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
         <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
@@ -533,7 +591,7 @@ body {
       <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+90%</span>
       <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
     </div>
-            </div>
+                </div>
           <div class="col-head">📊 Top Searches</div>
           
             <div class="query-row">
@@ -591,10 +649,11 @@ body {
           <div class="topic-name">biohacking</div>
           <div class="col-head">🔥 Rising</div>
           
-            <div class="query-row">
-              <span class="q-num">1</span>
-              <span class="q-text">botanical biohacking</span>
-              
+                <a class="query-row viral-row" href="https://news.google.com/search?q=botanical+biohacking&hl=en-US&gl=US&ceid=US:en" target="_blank" rel="noopener">
+                  <span class="viral-pulse"></span>
+                  <span class="q-num">1</span>
+                  <span class="q-text">botanical biohacking</span>
+                  
     <div style="display:flex;align-items:center;gap:10px;min-width:180px">
       <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
         <div style="width:100%;height:100%;background:#dc2626;border-radius:10px;"></div>
@@ -602,11 +661,13 @@ body {
       <span style="font-size:11px;font-weight:700;color:#dc2626;white-space:nowrap">+51100%</span>
       <span style="font-size:10px;background:#dc262618;color:#dc2626;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">🌋 Viral</span>
     </div>
-            </div>
-            <div class="query-row">
-              <span class="q-num">2</span>
-              <span class="q-text">what is biohacking for women</span>
-              
+                  <a class="why-btn why-news" href="https://news.google.com/search?q=botanical+biohacking&hl=en-US&gl=US&ceid=US:en" target="_blank" onclick="event.stopPropagation()">📰 Why?</a>
+                  <a class="why-btn why-trends" href="https://trends.google.com/trends/explore?q=botanical+biohacking&geo=US" target="_blank" onclick="event.stopPropagation()">📊 Trends</a>
+                </a>
+                <div class="query-row">
+                  <span class="q-num">2</span>
+                  <span class="q-text">what is biohacking for women</span>
+                  
     <div style="display:flex;align-items:center;gap:10px;min-width:180px">
       <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
         <div style="width:50%;height:100%;background:#65a30d;border-radius:10px;"></div>
@@ -614,11 +675,11 @@ body {
       <span style="font-size:11px;font-weight:700;color:#65a30d;white-space:nowrap">+140%</span>
       <span style="font-size:10px;background:#65a30d18;color:#65a30d;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">📈 Rising</span>
     </div>
-            </div>
-            <div class="query-row">
-              <span class="q-num">3</span>
-              <span class="q-text">dave asprey biohacking conference</span>
-              
+                </div>
+                <div class="query-row">
+                  <span class="q-num">3</span>
+                  <span class="q-text">dave asprey biohacking conference</span>
+                  
     <div style="display:flex;align-items:center;gap:10px;min-width:180px">
       <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
         <div style="width:50%;height:100%;background:#65a30d;border-radius:10px;"></div>
@@ -626,11 +687,11 @@ body {
       <span style="font-size:11px;font-weight:700;color:#65a30d;white-space:nowrap">+140%</span>
       <span style="font-size:10px;background:#65a30d18;color:#65a30d;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">📈 Rising</span>
     </div>
-            </div>
-            <div class="query-row">
-              <span class="q-num">4</span>
-              <span class="q-text">dave asprey biohacking</span>
-              
+                </div>
+                <div class="query-row">
+                  <span class="q-num">4</span>
+                  <span class="q-text">dave asprey biohacking</span>
+                  
     <div style="display:flex;align-items:center;gap:10px;min-width:180px">
       <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
         <div style="width:50%;height:100%;background:#65a30d;border-radius:10px;"></div>
@@ -638,11 +699,11 @@ body {
       <span style="font-size:11px;font-weight:700;color:#65a30d;white-space:nowrap">+130%</span>
       <span style="font-size:10px;background:#65a30d18;color:#65a30d;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">📈 Rising</span>
     </div>
-            </div>
-            <div class="query-row">
-              <span class="q-num">5</span>
-              <span class="q-text">dave asprey</span>
-              
+                </div>
+                <div class="query-row">
+                  <span class="q-num">5</span>
+                  <span class="q-text">dave asprey</span>
+                  
     <div style="display:flex;align-items:center;gap:10px;min-width:180px">
       <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
         <div style="width:50%;height:100%;background:#65a30d;border-radius:10px;"></div>
@@ -650,11 +711,11 @@ body {
       <span style="font-size:11px;font-weight:700;color:#65a30d;white-space:nowrap">+130%</span>
       <span style="font-size:10px;background:#65a30d18;color:#65a30d;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">📈 Rising</span>
     </div>
-            </div>
-            <div class="query-row">
-              <span class="q-num">6</span>
-              <span class="q-text">biohacking definition</span>
-              
+                </div>
+                <div class="query-row">
+                  <span class="q-num">6</span>
+                  <span class="q-text">biohacking definition</span>
+                  
     <div style="display:flex;align-items:center;gap:10px;min-width:180px">
       <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
         <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
@@ -662,11 +723,11 @@ body {
       <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+100%</span>
       <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
     </div>
-            </div>
-            <div class="query-row">
-              <span class="q-num">7</span>
-              <span class="q-text">biohacking conference</span>
-              
+                </div>
+                <div class="query-row">
+                  <span class="q-num">7</span>
+                  <span class="q-text">biohacking conference</span>
+                  
     <div style="display:flex;align-items:center;gap:10px;min-width:180px">
       <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
         <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
@@ -674,11 +735,11 @@ body {
       <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+90%</span>
       <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
     </div>
-            </div>
-            <div class="query-row">
-              <span class="q-num">8</span>
-              <span class="q-text">biohacking for women</span>
-              
+                </div>
+                <div class="query-row">
+                  <span class="q-num">8</span>
+                  <span class="q-text">biohacking for women</span>
+                  
     <div style="display:flex;align-items:center;gap:10px;min-width:180px">
       <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
         <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
@@ -686,11 +747,11 @@ body {
       <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+80%</span>
       <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
     </div>
-            </div>
-            <div class="query-row">
-              <span class="q-num">9</span>
-              <span class="q-text">what does biohacking mean</span>
-              
+                </div>
+                <div class="query-row">
+                  <span class="q-num">9</span>
+                  <span class="q-text">what does biohacking mean</span>
+                  
     <div style="display:flex;align-items:center;gap:10px;min-width:180px">
       <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
         <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
@@ -698,7 +759,7 @@ body {
       <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+60%</span>
       <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
     </div>
-            </div>
+                </div>
           <div class="col-head">📊 Top Searches</div>
           
             <div class="query-row">
@@ -756,10 +817,10 @@ body {
           <div class="topic-name">supplement ingredients</div>
           <div class="col-head">🔥 Rising</div>
           
-            <div class="query-row">
-              <span class="q-num">1</span>
-              <span class="q-text">emma supplement ingredients</span>
-              
+                <div class="query-row">
+                  <span class="q-num">1</span>
+                  <span class="q-text">emma supplement ingredients</span>
+                  
     <div style="display:flex;align-items:center;gap:10px;min-width:180px">
       <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
         <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
@@ -767,7 +828,7 @@ body {
       <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+70%</span>
       <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
     </div>
-            </div>
+                </div>
           <div class="col-head">📊 Top Searches</div>
           
             <div class="query-row">
@@ -1186,6 +1247,7 @@ body {
   <div class="footer-links">
     <a href="https://juliannabebre-sketch.github.io/trends-reports/">← All Reports</a>
     <a href="https://trends.google.com" target="_blank">Google Trends</a>
+    <a href="https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtVnVHZ0pWVXlnQVAB" target="_blank">Google News: Health</a>
     <a href="https://reddit.com/r/supplements" target="_blank">r/supplements</a>
     <a href="https://reddit.com/r/biohacking" target="_blank">r/biohacking</a>
   </div>

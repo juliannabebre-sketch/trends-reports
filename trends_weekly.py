@@ -311,7 +311,7 @@ for sub_name in SUBREDDITS:
                              headers=reddit_headers, timeout=10)
         posts = res.json()['data']['children']
         weekly_snapshot['reddit'][sub_name] = [
-            {'title': p['data']['title'], 'score': p['data']['score'], 'comments': p['data']['num_comments']}
+            {'title': p['data']['title'], 'score': p['data']['score'], 'comments': p['data']['num_comments'], 'url': f"https://reddit.com{p['data']['permalink']}"}
             for p in posts
         ]
     except:

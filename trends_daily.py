@@ -85,7 +85,7 @@ for sub_name in SUBREDDITS:
         snapshot['reddit'][sub_name] = []
         for i, post in enumerate(posts, 1):
             d = post['data']
-            snapshot['reddit'][sub_name].append({'title': d['title'], 'score': d['score'], 'comments': d['num_comments']})
+            snapshot['reddit'][sub_name].append({'title': d['title'], 'score': d['score'], 'comments': d['num_comments'], 'url': f"https://reddit.com{d['permalink']}"})
             log(f"   {i}. {d['title']}")
             log(f"      ⬆️  {d['score']} upvotes | 💬 {d['num_comments']} comments")
     except Exception as e:
