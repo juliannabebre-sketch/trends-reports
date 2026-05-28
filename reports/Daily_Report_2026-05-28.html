@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daily Trends — May 27, 2026</title>
+<title>Daily Trends — May 28, 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #f8fafc; color: #0f172a; line-height: 1.6;
+  background: #f1f5f9; color: #0f172a; line-height: 1.6;
 }
 
 /* HERO */
@@ -98,27 +98,28 @@ body {
 
 /* SECTION */
 .section {
-  background: white; border-radius: 20px; overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.04);
-  margin-bottom: 24px; border: 1px solid #f1f5f9;
+  background: white; border-radius: 22px; overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05), 0 8px 24px rgba(0,0,0,0.05);
+  margin-bottom: 24px; border: 1px solid #e2e8f0;
 }
 .section-head {
   display: flex; align-items: center; gap: 14px;
-  padding: 18px 24px; border-bottom: 1px solid #f8fafc;
+  padding: 20px 26px; border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 .section-icon {
-  width: 38px; height: 38px; border-radius: 10px;
+  width: 42px; height: 42px; border-radius: 12px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 18px; flex-shrink: 0;
+  font-size: 20px; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 .section-info { flex: 1; }
-.section-title { font-size: 15px; font-weight: 700; color: #0f172a; }
-.section-desc  { font-size: 12px; color: #94a3b8; margin-top: 1px; }
+.section-title { font-size: 16px; font-weight: 800; color: #0f172a; letter-spacing: -0.3px; }
+.section-desc  { font-size: 12px; color: #94a3b8; margin-top: 2px; font-weight: 500; }
 .section-badge {
-  font-size: 11px; font-weight: 700; padding: 4px 12px;
-  border-radius: 20px; white-space: nowrap;
+  font-size: 11px; font-weight: 700; padding: 5px 14px;
+  border-radius: 20px; white-space: nowrap; letter-spacing: 0.3px;
 }
-.section-body { padding: 20px 24px; }
+.section-body { padding: 22px 26px; }
 
 /* COLOR THEMES */
 .theme-google .section-head { background: linear-gradient(135deg, #eff6ff, #dbeafe); }
@@ -142,38 +143,66 @@ body {
 .theme-insights .section-badge { background: #ede9fe; color: #7c3aed; }
 
 /* TOPIC BLOCK */
-.topic-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.topic-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 @media(max-width:640px){ .topic-grid { grid-template-columns: 1fr; } }
-.topic-block { background: #f8fafc; border-radius: 14px; padding: 16px; border: 1px solid #f1f5f9; }
+.topic-block {
+  background: white; border-radius: 16px; padding: 18px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
 .topic-name {
   font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px;
-  color: #7c3aed; margin-bottom: 12px; display: flex; align-items: center; gap: 6px;
+  color: #7c3aed; margin-bottom: 14px; display: flex; align-items: center; gap: 8px;
 }
-.topic-name::after { content:''; flex:1; height:1px; background:#e2e8f0; }
+.topic-name::after { content:''; flex:1; height:1px; background:#ede9fe; }
 .col-head {
   font-size: 10px; font-weight: 700; text-transform: uppercase;
-  letter-spacing: 0.6px; color: #94a3b8; margin: 10px 0 6px;
+  letter-spacing: 0.6px; color: #94a3b8; margin: 12px 0 7px;
+  display: flex; align-items: center; gap: 6px;
 }
+.col-head::after { content:''; flex:1; height:1px; background:#f1f5f9; }
 
 /* QUERY ROWS */
 .query-row {
   display: flex; align-items: center; gap: 10px;
-  padding: 8px 10px; border-radius: 9px; margin-bottom: 4px;
-  background: white; border: 1px solid #f1f5f9; transition: background 0.15s;
+  padding: 9px 12px; border-radius: 10px; margin-bottom: 5px;
+  background: #f8fafc; border: 1px solid #f1f5f9; transition: all 0.15s;
 }
-.query-row:hover { background: #f0f9ff; border-color: #bae6fd; }
-.q-num { color: #cbd5e1; font-size: 11px; font-weight: 700; width: 18px; flex-shrink: 0; }
+.query-row:hover { background: #eff6ff; border-color: #bfdbfe; transform: translateX(2px); }
+.q-num {
+  color: #c7d2fe; font-size: 11px; font-weight: 800; width: 20px;
+  flex-shrink: 0; text-align: center;
+}
 .q-text { flex: 1; font-size: 13px; font-weight: 600; color: #1e293b; }
-.q-score { font-size: 12px; color: #64748b; font-weight: 600; }
+.q-score {
+  font-size: 12px; font-weight: 700; color: #4f46e5;
+  background: #eef2ff; padding: 2px 8px; border-radius: 6px;
+}
 
 /* REDDIT CARDS */
 .reddit-card {
   padding: 14px 16px; border-radius: 12px; margin-bottom: 8px;
-  border: 1px solid #f1f5f9; background: #fafafa; transition: all 0.15s;
+  border: 1px solid #e2e8f0; background: white; transition: all 0.2s;
+  text-decoration: none; color: inherit; display: block;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
 }
-.reddit-card:hover { background: #fff7ed; border-color: #fed7aa; }
-.reddit-title { font-size: 14px; font-weight: 600; color: #1e293b; margin-bottom: 8px; line-height: 1.4; }
-.reddit-meta { display: flex; gap: 8px; flex-wrap: wrap; }
+.reddit-card:hover {
+  background: #fff7ed; border-color: #fb923c;
+  box-shadow: 0 4px 14px rgba(251,146,60,0.15);
+  transform: translateY(-1px);
+}
+.reddit-card-inner { display: flex; gap: 12px; align-items: flex-start; }
+.reddit-icon {
+  width: 36px; height: 36px; background: #ff4500; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; flex-shrink: 0; color: white; font-weight: 800;
+}
+.reddit-body { flex: 1; }
+.reddit-title { font-size: 14px; font-weight: 600; color: #1e293b; margin-bottom: 8px; line-height: 1.45; }
+.reddit-card:hover .reddit-title { color: #c2410c; }
+.reddit-meta { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.reddit-arrow { color: #94a3b8; font-size: 16px; align-self: center; flex-shrink: 0; transition: transform 0.2s; }
+.reddit-card:hover .reddit-arrow { transform: translateX(3px); color: #c2410c; }
 
 /* YOUTUBE CARDS */
 .yt-card {
@@ -196,17 +225,23 @@ body {
 .yt-btn:hover { background: #b91c1c; }
 
 /* AMAZON */
-.amz-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+.amz-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
 .amz-card {
-  background: #fafafa; border: 1px solid #f1f5f9; border-radius: 12px;
-  padding: 14px; display: flex; align-items: flex-start; gap: 10px;
-  transition: all 0.15s;
+  background: white; border: 1px solid #e2e8f0; border-radius: 14px;
+  padding: 14px 16px; display: flex; align-items: flex-start; gap: 12px;
+  transition: all 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.04);
 }
-.amz-card:hover { background: #fffbeb; border-color: #fde68a; }
+.amz-card:hover {
+  background: #fffbeb; border-color: #fbbf24;
+  box-shadow: 0 4px 12px rgba(251,191,36,0.15);
+  transform: translateY(-1px);
+}
 .amz-rank {
-  background: #ff9900; color: white; border-radius: 8px;
-  width: 28px; height: 28px; display: flex; align-items: center;
+  background: linear-gradient(135deg, #ff9900, #f59e0b);
+  color: white; border-radius: 8px;
+  width: 30px; height: 30px; display: flex; align-items: center;
   justify-content: center; font-size: 12px; font-weight: 800; flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(255,153,0,0.3);
 }
 .amz-name { font-size: 13px; font-weight: 600; color: #1e293b; line-height: 1.4; }
 
@@ -288,15 +323,15 @@ body {
     <div class="timeframe-block">
       <div class="tf-segment">
         <div class="tf-label">Period</div>
-        <div class="tf-value accent">Last 12 Months</div>
+        <div class="tf-value accent">Last 7 Days</div>
       </div>
       <div class="tf-segment">
         <div class="tf-label">Date Range</div>
-        <div class="tf-value">May 2025 – May 2026</div>
+        <div class="tf-value">May 21 – May 28, 2026</div>
       </div>
       <div class="tf-segment">
         <div class="tf-label">Published</div>
-        <div class="tf-value">May 27, 2026</div>
+        <div class="tf-value">May 28, 2026</div>
       </div>
       <div class="tf-segment">
         <div class="tf-label">Market</div>
@@ -313,9 +348,9 @@ body {
     <div class="section-icon">🔵</div>
     <div class="section-info">
       <div class="section-title">Google Trends</div>
-      <div class="section-desc">Rising & top search queries · Last 12 Months · US Market</div>
+      <div class="section-desc">Rising & top search queries · Last 7 Days · US Market</div>
     </div>
-    <span class="section-badge">Last 12 Months</span>
+    <span class="section-badge">Last 7 Days</span>
   </div>
   <div class="section-body"><div class="topic-grid">
         <div class="topic-block">
@@ -324,30 +359,6 @@ body {
           
             <div class="query-row">
               <span class="q-num">1</span>
-              <span class="q-text">providence health plan news</span>
-              
-    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
-      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
-        <div style="width:85%;height:100%;background:#ea580c;border-radius:10px;"></div>
-      </div>
-      <span style="font-size:11px;font-weight:700;color:#ea580c;white-space:nowrap">+2050%</span>
-      <span style="font-size:10px;background:#ea580c18;color:#ea580c;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">🔥 Explosive</span>
-    </div>
-            </div>
-            <div class="query-row">
-              <span class="q-num">2</span>
-              <span class="q-text">willis homes public health alert</span>
-              
-    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
-      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
-        <div style="width:50%;height:100%;background:#65a30d;border-radius:10px;"></div>
-      </div>
-      <span style="font-size:11px;font-weight:700;color:#65a30d;white-space:nowrap">+250%</span>
-      <span style="font-size:10px;background:#65a30d18;color:#65a30d;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">📈 Rising</span>
-    </div>
-            </div>
-            <div class="query-row">
-              <span class="q-num">3</span>
               <span class="q-text">google health app</span>
               
     <div style="display:flex;align-items:center;gap:10px;min-width:180px">
@@ -359,43 +370,43 @@ body {
     </div>
             </div>
             <div class="query-row">
-              <span class="q-num">4</span>
-              <span class="q-text">phil collins health</span>
+              <span class="q-num">2</span>
+              <span class="q-text">willis homes public health alert</span>
               
     <div style="display:flex;align-items:center;gap:10px;min-width:180px">
       <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
         <div style="width:50%;height:100%;background:#65a30d;border-radius:10px;"></div>
       </div>
-      <span style="font-size:11px;font-weight:700;color:#65a30d;white-space:nowrap">+130%</span>
+      <span style="font-size:11px;font-weight:700;color:#65a30d;white-space:nowrap">+150%</span>
       <span style="font-size:10px;background:#65a30d18;color:#65a30d;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">📈 Rising</span>
     </div>
             </div>
             <div class="query-row">
-              <span class="q-num">5</span>
-              <span class="q-text">trump health</span>
-              
-    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
-      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
-        <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
-      </div>
-      <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+60%</span>
-      <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
-    </div>
-            </div>
-            <div class="query-row">
-              <span class="q-num">6</span>
+              <span class="q-num">3</span>
               <span class="q-text">google health</span>
               
     <div style="display:flex;align-items:center;gap:10px;min-width:180px">
       <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
         <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
       </div>
-      <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+60%</span>
+      <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+70%</span>
       <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
     </div>
             </div>
             <div class="query-row">
-              <span class="q-num">7</span>
+              <span class="q-num">4</span>
+              <span class="q-text">trump health</span>
+              
+    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
+      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
+        <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
+      </div>
+      <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+70%</span>
+      <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
+    </div>
+            </div>
+            <div class="query-row">
+              <span class="q-num">5</span>
               <span class="q-text">battery health check iphone</span>
               
     <div style="display:flex;align-items:center;gap:10px;min-width:180px">
@@ -407,6 +418,30 @@ body {
     </div>
             </div>
             <div class="query-row">
+              <span class="q-num">6</span>
+              <span class="q-text">how to check hard drive health</span>
+              
+    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
+      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
+        <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
+      </div>
+      <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+50%</span>
+      <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
+    </div>
+            </div>
+            <div class="query-row">
+              <span class="q-num">7</span>
+              <span class="q-text">how to check laptop battery health</span>
+              
+    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
+      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
+        <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
+      </div>
+      <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+40%</span>
+      <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
+    </div>
+            </div>
+            <div class="query-row">
               <span class="q-num">8</span>
               <span class="q-text">genesis health club</span>
               
@@ -414,7 +449,7 @@ body {
       <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
         <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
       </div>
-      <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+50%</span>
+      <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+40%</span>
       <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
     </div>
             </div>
@@ -426,19 +461,7 @@ body {
       <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
         <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
       </div>
-      <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+50%</span>
-      <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
-    </div>
-            </div>
-            <div class="query-row">
-              <span class="q-num">10</span>
-              <span class="q-text">how to check laptop battery health</span>
-              
-    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
-      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
-        <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
-      </div>
-      <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+50%</span>
+      <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+40%</span>
       <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
     </div>
             </div>
@@ -452,22 +475,22 @@ body {
             <div class="query-row">
               <span class="q-num">2</span>
               <span class="q-text">health insurance</span>
-              <span class="q-score">79</span>
+              <span class="q-score">86</span>
             </div>
             <div class="query-row">
               <span class="q-num">3</span>
               <span class="q-text">health department</span>
-              <span class="q-score">30</span>
+              <span class="q-score">33</span>
             </div>
             <div class="query-row">
               <span class="q-num">4</span>
               <span class="q-text">behavioral health</span>
-              <span class="q-score">27</span>
+              <span class="q-score">30</span>
             </div>
             <div class="query-row">
               <span class="q-num">5</span>
               <span class="q-text">google health</span>
-              <span class="q-score">18</span>
+              <span class="q-score">22</span>
             </div>
             <div class="query-row">
               <span class="q-num">6</span>
@@ -487,12 +510,12 @@ body {
             <div class="query-row">
               <span class="q-num">9</span>
               <span class="q-text">cvs health</span>
-              <span class="q-score">10</span>
+              <span class="q-score">11</span>
             </div>
             <div class="query-row">
               <span class="q-num">10</span>
-              <span class="q-text">baptist health</span>
-              <span class="q-score">7</span>
+              <span class="q-text">womens health</span>
+              <span class="q-score">9</span>
             </div>
         </div>
         <div class="topic-block">
@@ -538,12 +561,12 @@ body {
             <div class="query-row">
               <span class="q-num">3</span>
               <span class="q-text">iron supplements</span>
-              <span class="q-score">40</span>
+              <span class="q-score">38</span>
             </div>
             <div class="query-row">
               <span class="q-num">4</span>
               <span class="q-text">magnesium</span>
-              <span class="q-score">30</span>
+              <span class="q-score">31</span>
             </div>
             <div class="query-row">
               <span class="q-num">5</span>
@@ -558,21 +581,21 @@ body {
             <div class="query-row">
               <span class="q-num">7</span>
               <span class="q-text">collagen supplements</span>
-              <span class="q-score">22</span>
+              <span class="q-score">21</span>
             </div>
             <div class="query-row">
               <span class="q-num">8</span>
               <span class="q-text">collagen</span>
-              <span class="q-score">20</span>
+              <span class="q-score">21</span>
             </div>
             <div class="query-row">
               <span class="q-num">9</span>
               <span class="q-text">weight loss supplements</span>
-              <span class="q-score">17</span>
+              <span class="q-score">16</span>
             </div>
             <div class="query-row">
               <span class="q-num">10</span>
-              <span class="q-text">protein supplements</span>
+              <span class="q-text">calcium supplements</span>
               <span class="q-score">15</span>
             </div>
         </div>
@@ -582,31 +605,43 @@ body {
           
             <div class="query-row">
               <span class="q-num">1</span>
-              <span class="q-text">biohacking guy</span>
+              <span class="q-text">what is biohacking for women</span>
               
     <div style="display:flex;align-items:center;gap:10px;min-width:180px">
       <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
-        <div style="width:50%;height:100%;background:#65a30d;border-radius:10px;"></div>
+        <div style="width:100%;height:100%;background:#dc2626;border-radius:10px;"></div>
       </div>
-      <span style="font-size:11px;font-weight:700;color:#65a30d;white-space:nowrap">+190%</span>
-      <span style="font-size:10px;background:#65a30d18;color:#65a30d;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">📈 Rising</span>
+      <span style="font-size:11px;font-weight:700;color:#dc2626;white-space:nowrap">+75100%</span>
+      <span style="font-size:10px;background:#dc262618;color:#dc2626;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">🌋 Viral</span>
     </div>
             </div>
             <div class="query-row">
               <span class="q-num">2</span>
-              <span class="q-text">biohackers</span>
+              <span class="q-text">dave asprey biohacking conference</span>
               
     <div style="display:flex;align-items:center;gap:10px;min-width:180px">
       <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
         <div style="width:50%;height:100%;background:#65a30d;border-radius:10px;"></div>
       </div>
-      <span style="font-size:11px;font-weight:700;color:#65a30d;white-space:nowrap">+170%</span>
+      <span style="font-size:11px;font-weight:700;color:#65a30d;white-space:nowrap">+180%</span>
       <span style="font-size:10px;background:#65a30d18;color:#65a30d;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">📈 Rising</span>
     </div>
             </div>
             <div class="query-row">
               <span class="q-num">3</span>
-              <span class="q-text">biohacking que es y como funciona</span>
+              <span class="q-text">dave asprey</span>
+              
+    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
+      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
+        <div style="width:50%;height:100%;background:#65a30d;border-radius:10px;"></div>
+      </div>
+      <span style="font-size:11px;font-weight:700;color:#65a30d;white-space:nowrap">+150%</span>
+      <span style="font-size:10px;background:#65a30d18;color:#65a30d;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">📈 Rising</span>
+    </div>
+            </div>
+            <div class="query-row">
+              <span class="q-num">4</span>
+              <span class="q-text">dave asprey biohacking</span>
               
     <div style="display:flex;align-items:center;gap:10px;min-width:180px">
       <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
@@ -617,55 +652,7 @@ body {
     </div>
             </div>
             <div class="query-row">
-              <span class="q-num">4</span>
-              <span class="q-text">what does biohacking mean</span>
-              
-    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
-      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
-        <div style="width:50%;height:100%;background:#65a30d;border-radius:10px;"></div>
-      </div>
-      <span style="font-size:11px;font-weight:700;color:#65a30d;white-space:nowrap">+130%</span>
-      <span style="font-size:10px;background:#65a30d18;color:#65a30d;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">📈 Rising</span>
-    </div>
-            </div>
-            <div class="query-row">
               <span class="q-num">5</span>
-              <span class="q-text">what is biohacking for women</span>
-              
-    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
-      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
-        <div style="width:50%;height:100%;background:#65a30d;border-radius:10px;"></div>
-      </div>
-      <span style="font-size:11px;font-weight:700;color:#65a30d;white-space:nowrap">+130%</span>
-      <span style="font-size:10px;background:#65a30d18;color:#65a30d;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">📈 Rising</span>
-    </div>
-            </div>
-            <div class="query-row">
-              <span class="q-num">6</span>
-              <span class="q-text">biohacking conference austin</span>
-              
-    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
-      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
-        <div style="width:50%;height:100%;background:#65a30d;border-radius:10px;"></div>
-      </div>
-      <span style="font-size:11px;font-weight:700;color:#65a30d;white-space:nowrap">+120%</span>
-      <span style="font-size:10px;background:#65a30d18;color:#65a30d;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">📈 Rising</span>
-    </div>
-            </div>
-            <div class="query-row">
-              <span class="q-num">7</span>
-              <span class="q-text">dave asprey biohacking conference</span>
-              
-    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
-      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
-        <div style="width:50%;height:100%;background:#65a30d;border-radius:10px;"></div>
-      </div>
-      <span style="font-size:11px;font-weight:700;color:#65a30d;white-space:nowrap">+110%</span>
-      <span style="font-size:10px;background:#65a30d18;color:#65a30d;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">📈 Rising</span>
-    </div>
-            </div>
-            <div class="query-row">
-              <span class="q-num">8</span>
               <span class="q-text">biohacking conference</span>
               
     <div style="display:flex;align-items:center;gap:10px;min-width:180px">
@@ -677,26 +664,62 @@ body {
     </div>
             </div>
             <div class="query-row">
-              <span class="q-num">9</span>
+              <span class="q-num">6</span>
+              <span class="q-text">biohacking conference austin</span>
+              
+    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
+      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
+        <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
+      </div>
+      <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+100%</span>
+      <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
+    </div>
+            </div>
+            <div class="query-row">
+              <span class="q-num">7</span>
+              <span class="q-text">what does biohacking mean</span>
+              
+    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
+      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
+        <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
+      </div>
+      <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+80%</span>
+      <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
+    </div>
+            </div>
+            <div class="query-row">
+              <span class="q-num">8</span>
               <span class="q-text">biohacking definition</span>
               
     <div style="display:flex;align-items:center;gap:10px;min-width:180px">
       <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
         <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
       </div>
-      <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+90%</span>
+      <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+70%</span>
       <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
     </div>
             </div>
             <div class="query-row">
-              <span class="q-num">10</span>
-              <span class="q-text">dave asprey</span>
+              <span class="q-num">9</span>
+              <span class="q-text">biohacking guy</span>
               
     <div style="display:flex;align-items:center;gap:10px;min-width:180px">
       <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
         <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
       </div>
-      <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+50%</span>
+      <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+60%</span>
+      <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
+    </div>
+            </div>
+            <div class="query-row">
+              <span class="q-num">10</span>
+              <span class="q-text">biohacking for women</span>
+              
+    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
+      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
+        <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
+      </div>
+      <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+40%</span>
       <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
     </div>
             </div>
@@ -710,47 +733,47 @@ body {
             <div class="query-row">
               <span class="q-num">2</span>
               <span class="q-text">what is biohacking</span>
-              <span class="q-score">68</span>
+              <span class="q-score">62</span>
             </div>
             <div class="query-row">
               <span class="q-num">3</span>
               <span class="q-text">subnautica 2 biohacking</span>
-              <span class="q-score">68</span>
+              <span class="q-score">52</span>
             </div>
             <div class="query-row">
               <span class="q-num">4</span>
               <span class="q-text">biohacking chamber subnautica 2</span>
-              <span class="q-score">43</span>
+              <span class="q-score">39</span>
             </div>
             <div class="query-row">
               <span class="q-num">5</span>
-              <span class="q-text">peptides</span>
-              <span class="q-score">35</span>
+              <span class="q-text">dave asprey biohacking</span>
+              <span class="q-score">36</span>
             </div>
             <div class="query-row">
               <span class="q-num">6</span>
-              <span class="q-text">biohacking conference austin</span>
-              <span class="q-score">32</span>
+              <span class="q-text">dave asprey</span>
+              <span class="q-score">35</span>
             </div>
             <div class="query-row">
               <span class="q-num">7</span>
-              <span class="q-text">biohacking meaning</span>
-              <span class="q-score">32</span>
+              <span class="q-text">biohacking conference austin</span>
+              <span class="q-score">31</span>
             </div>
             <div class="query-row">
               <span class="q-num">8</span>
-              <span class="q-text">dave asprey biohacking</span>
-              <span class="q-score">30</span>
+              <span class="q-text">peptides</span>
+              <span class="q-score">28</span>
             </div>
             <div class="query-row">
               <span class="q-num">9</span>
-              <span class="q-text">dave asprey</span>
-              <span class="q-score">26</span>
+              <span class="q-text">biohacking meaning</span>
+              <span class="q-score">28</span>
             </div>
             <div class="query-row">
               <span class="q-num">10</span>
-              <span class="q-text">biohacking reddit</span>
-              <span class="q-score">23</span>
+              <span class="q-text">dave asprey biohacking conference</span>
+              <span class="q-score">25</span>
             </div>
         </div>
         <div class="topic-block">
@@ -776,122 +799,257 @@ body {
     <span class="section-badge">This Week</span>
   </div>
   <div class="section-body">
-        <div style="margin-bottom:24px">
-          <div style="font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:0.8px;color:#c2410c;margin-bottom:10px">r/supplements</div>
+        <div style="margin-bottom:28px">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+            <span style="background:#ff4500;color:white;font-size:11px;font-weight:800;padding:3px 10px;border-radius:8px">r/supplements</span>
+            <span style="font-size:11px;color:#94a3b8">Click any post to open on Reddit →</span>
+          </div>
           
-            <div class="reddit-card">
-              <div class="reddit-title">Reminder on Community Conduct</div>
-              <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 30</span>
+            <a class="reddit-card" href="https://reddit.com/r/Supplements/comments/1ndwthg/reminder_on_community_conduct/" target="_blank" rel="noopener">
+              <div class="reddit-card-inner">
+                <div class="reddit-icon">r/</div>
+                <div class="reddit-body">
+                  <div class="reddit-title">Reminder on Community Conduct</div>
+                  <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 37</span>
     <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 54</span></div>
-            </div>
-            <div class="reddit-card">
-              <div class="reddit-title">Why are most kids vitamins basically candy and what to look for instead</div>
-              <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 10</span>
-    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 15</span></div>
-            </div>
-            <div class="reddit-card">
-              <div class="reddit-title">Primal Queen put me in ER</div>
-              <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 8</span>
-    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 7</span></div>
-            </div>
-            <div class="reddit-card">
-              <div class="reddit-title">Has anyone tried this protein waiter? Actually curious 🫥</div>
-              <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 27</span>
-    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 30</span></div>
-            </div>
-            <div class="reddit-card">
-              <div class="reddit-title">What are the best supplements for your brain?</div>
-              <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 48</span>
-    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 51</span></div>
-            </div>
-            <div class="reddit-card">
-              <div class="reddit-title">Are there supplements that help suppress dreams?</div>
-              <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 6</span>
-    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 25</span></div>
-            </div>
-            <div class="reddit-card">
-              <div class="reddit-title">Colostrum is everywhere right now — is the hype actually deserved?</div>
-              <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 5</span>
-    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 5</span></div>
-            </div>
+                </div>
+                <span class="reddit-arrow">→</span>
+              </div>
+            </a>
+            <a class="reddit-card" href="https://reddit.com/r/Supplements/comments/1tphz3u/do_you_make_your_own_electrolyte_formula_at_home/" target="_blank" rel="noopener">
+              <div class="reddit-card-inner">
+                <div class="reddit-icon">r/</div>
+                <div class="reddit-body">
+                  <div class="reddit-title">Do you make your own electrolyte formula at home? It's so much cheaper.</div>
+                  <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 36</span>
+    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 18</span></div>
+                </div>
+                <span class="reddit-arrow">→</span>
+              </div>
+            </a>
+            <a class="reddit-card" href="https://reddit.com/r/Supplements/comments/1tpq4f5/are_there_decent_supplements_that_help_with/" target="_blank" rel="noopener">
+              <div class="reddit-card-inner">
+                <div class="reddit-icon">r/</div>
+                <div class="reddit-body">
+                  <div class="reddit-title">are there decent supplements that help with depression?</div>
+                  <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 8</span>
+    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 28</span></div>
+                </div>
+                <span class="reddit-arrow">→</span>
+              </div>
+            </a>
+            <a class="reddit-card" href="https://reddit.com/r/Supplements/comments/1tpgde6/vitamins_for_skinhair_that_are_actually_worth_it/" target="_blank" rel="noopener">
+              <div class="reddit-card-inner">
+                <div class="reddit-icon">r/</div>
+                <div class="reddit-body">
+                  <div class="reddit-title">Vitamins for Skin/Hair that are actually worth it</div>
+                  <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 22</span>
+    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 26</span></div>
+                </div>
+                <span class="reddit-arrow">→</span>
+              </div>
+            </a>
+            <a class="reddit-card" href="https://reddit.com/r/Supplements/comments/1tpktln/hyped_and_famous_supplement_that_didnt_work_for/" target="_blank" rel="noopener">
+              <div class="reddit-card-inner">
+                <div class="reddit-icon">r/</div>
+                <div class="reddit-body">
+                  <div class="reddit-title">Hyped and famous supplement that DIDN'T work for you</div>
+                  <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 15</span>
+    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 42</span></div>
+                </div>
+                <span class="reddit-arrow">→</span>
+              </div>
+            </a>
+            <a class="reddit-card" href="https://reddit.com/r/Supplements/comments/1tpemup/best_hangover_cure/" target="_blank" rel="noopener">
+              <div class="reddit-card-inner">
+                <div class="reddit-icon">r/</div>
+                <div class="reddit-body">
+                  <div class="reddit-title">Best hangover cure??</div>
+                  <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 13</span>
+    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 72</span></div>
+                </div>
+                <span class="reddit-arrow">→</span>
+              </div>
+            </a>
+            <a class="reddit-card" href="https://reddit.com/r/Supplements/comments/1tp884g/why_are_most_kids_vitamins_basically_candy_and/" target="_blank" rel="noopener">
+              <div class="reddit-card-inner">
+                <div class="reddit-icon">r/</div>
+                <div class="reddit-body">
+                  <div class="reddit-title">Why are most kids vitamins basically candy and what to look for instead</div>
+                  <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 23</span>
+    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 24</span></div>
+                </div>
+                <span class="reddit-arrow">→</span>
+              </div>
+            </a>
         </div>
-        <div style="margin-bottom:24px">
-          <div style="font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:0.8px;color:#c2410c;margin-bottom:10px">r/biohacking</div>
+        <div style="margin-bottom:28px">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+            <span style="background:#ff4500;color:white;font-size:11px;font-weight:800;padding:3px 10px;border-radius:8px">r/biohacking</span>
+            <span style="font-size:11px;color:#94a3b8">Click any post to open on Reddit →</span>
+          </div>
           
-            <div class="reddit-card">
-              <div class="reddit-title">Welcome to r/Biohacking!</div>
-              <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 34</span>
+            <a class="reddit-card" href="https://reddit.com/r/Biohacking/comments/1li3nki/welcome_to_rbiohacking/" target="_blank" rel="noopener">
+              <div class="reddit-card-inner">
+                <div class="reddit-icon">r/</div>
+                <div class="reddit-body">
+                  <div class="reddit-title">Welcome to r/Biohacking!</div>
+                  <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 33</span>
+    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 4</span></div>
+                </div>
+                <span class="reddit-arrow">→</span>
+              </div>
+            </a>
+            <a class="reddit-card" href="https://reddit.com/r/Biohacking/comments/1td0mpa/we_are_looking_for_community_moderators/" target="_blank" rel="noopener">
+              <div class="reddit-card-inner">
+                <div class="reddit-icon">r/</div>
+                <div class="reddit-body">
+                  <div class="reddit-title">We are looking for community moderators!</div>
+                  <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 2</span>
+    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 1</span></div>
+                </div>
+                <span class="reddit-arrow">→</span>
+              </div>
+            </a>
+            <a class="reddit-card" href="https://reddit.com/r/Biohacking/comments/1tpsqay/260_198_retatesamotcigf1lr3bpc157tb500/" target="_blank" rel="noopener">
+              <div class="reddit-card-inner">
+                <div class="reddit-icon">r/</div>
+                <div class="reddit-body">
+                  <div class="reddit-title">260 ➡️ 198 (Reta/Tesa/Mot-c/IGF1-LR3/BPC-157/TB-500)</div>
+                  <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 8</span>
+    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 4</span></div>
+                </div>
+                <span class="reddit-arrow">→</span>
+              </div>
+            </a>
+            <a class="reddit-card" href="https://reddit.com/r/Biohacking/comments/1toqi8c/tirzreta/" target="_blank" rel="noopener">
+              <div class="reddit-card-inner">
+                <div class="reddit-icon">r/</div>
+                <div class="reddit-body">
+                  <div class="reddit-title">Tirz/Reta</div>
+                  <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 825</span>
+    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 189</span></div>
+                </div>
+                <span class="reddit-arrow">→</span>
+              </div>
+            </a>
+            <a class="reddit-card" href="https://reddit.com/r/Biohacking/comments/1tp6glo/reta_glow_70_3_month_progress/" target="_blank" rel="noopener">
+              <div class="reddit-card-inner">
+                <div class="reddit-icon">r/</div>
+                <div class="reddit-body">
+                  <div class="reddit-title">Reta &amp; GLOW 70 - 3 Month Progress</div>
+                  <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 47</span>
+    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 27</span></div>
+                </div>
+                <span class="reddit-arrow">→</span>
+              </div>
+            </a>
+            <a class="reddit-card" href="https://reddit.com/r/Biohacking/comments/1tot41c/before_and_after/" target="_blank" rel="noopener">
+              <div class="reddit-card-inner">
+                <div class="reddit-icon">r/</div>
+                <div class="reddit-body">
+                  <div class="reddit-title">Before and After</div>
+                  <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 272</span>
+    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 91</span></div>
+                </div>
+                <span class="reddit-arrow">→</span>
+              </div>
+            </a>
+            <a class="reddit-card" href="https://reddit.com/r/Biohacking/comments/1tpaifn/anyone_else_find_this_crazy/" target="_blank" rel="noopener">
+              <div class="reddit-card-inner">
+                <div class="reddit-icon">r/</div>
+                <div class="reddit-body">
+                  <div class="reddit-title">Anyone else find this crazy?</div>
+                  <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 23</span>
+    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 131</span></div>
+                </div>
+                <span class="reddit-arrow">→</span>
+              </div>
+            </a>
+        </div>
+        <div style="margin-bottom:28px">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+            <span style="background:#ff4500;color:white;font-size:11px;font-weight:800;padding:3px 10px;border-radius:8px">r/health</span>
+            <span style="font-size:11px;color:#94a3b8">Click any post to open on Reddit →</span>
+          </div>
+          
+            <a class="reddit-card" href="https://reddit.com/r/Health/comments/1tpc2bi/rubio_says_us_cannot_allow_any_ebola_cases_to/" target="_blank" rel="noopener">
+              <div class="reddit-card-inner">
+                <div class="reddit-icon">r/</div>
+                <div class="reddit-body">
+                  <div class="reddit-title">Rubio says US cannot allow any Ebola cases to enter the country</div>
+                  <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 273</span>
+    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 49</span></div>
+                </div>
+                <span class="reddit-arrow">→</span>
+              </div>
+            </a>
+            <a class="reddit-card" href="https://reddit.com/r/Health/comments/1tp6705/this_is_what_happens_when_you_defund_ebola/" target="_blank" rel="noopener">
+              <div class="reddit-card-inner">
+                <div class="reddit-icon">r/</div>
+                <div class="reddit-body">
+                  <div class="reddit-title">This is what happens when you defund Ebola prevention</div>
+                  <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 223</span>
+    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 1</span></div>
+                </div>
+                <span class="reddit-arrow">→</span>
+              </div>
+            </a>
+            <a class="reddit-card" href="https://reddit.com/r/Health/comments/1tpmp2n/us_cdc_seeks_staff_for_ebola_screening_as/" target="_blank" rel="noopener">
+              <div class="reddit-card-inner">
+                <div class="reddit-icon">r/</div>
+                <div class="reddit-body">
+                  <div class="reddit-title">US CDC seeks staff for Ebola screening as outbreak response expands</div>
+                  <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 27</span>
     <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 3</span></div>
-            </div>
-            <div class="reddit-card">
-              <div class="reddit-title">We are looking for community moderators!</div>
-              <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 2</span>
+                </div>
+                <span class="reddit-arrow">→</span>
+              </div>
+            </a>
+            <a class="reddit-card" href="https://reddit.com/r/Health/comments/1tpn80b/this_toronto_cosmetic_clinic_had_24_cameras/" target="_blank" rel="noopener">
+              <div class="reddit-card-inner">
+                <div class="reddit-icon">r/</div>
+                <div class="reddit-body">
+                  <div class="reddit-title">This Toronto cosmetic clinic had 24 cameras watching patients. Here's why that will cost them $22.5 million</div>
+                  <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 23</span>
     <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 1</span></div>
-            </div>
-            <div class="reddit-card">
-              <div class="reddit-title">Tirz/Reta</div>
-              <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 516</span>
-    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 108</span></div>
-            </div>
-            <div class="reddit-card">
-              <div class="reddit-title">Before and After</div>
-              <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 182</span>
-    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 64</span></div>
-            </div>
-            <div class="reddit-card">
-              <div class="reddit-title">Reta &amp; GLOW 70 - 3 Month Progress</div>
-              <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 11</span>
-    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 10</span></div>
-            </div>
-            <div class="reddit-card">
-              <div class="reddit-title">Day 73 Reta transformation. DOWN 50lbs!!!! Progress pics</div>
-              <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 31</span>
-    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 14</span></div>
-            </div>
-            <div class="reddit-card">
-              <div class="reddit-title">Current Stack</div>
-              <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 2</span>
-    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 2</span></div>
-            </div>
-        </div>
-        <div style="margin-bottom:24px">
-          <div style="font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:0.8px;color:#c2410c;margin-bottom:10px">r/health</div>
-          
-            <div class="reddit-card">
-              <div class="reddit-title">This is what happens when you defund Ebola prevention</div>
-              <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 81</span>
-    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 1</span></div>
-            </div>
-            <div class="reddit-card">
-              <div class="reddit-title">A 27-year-old woman with extreme cramping lied about having a common colon cancer symptom to get screened sooner. She was later diagnosed at stage 4.</div>
-              <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 1,586</span>
-    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 51</span></div>
-            </div>
-            <div class="reddit-card">
-              <div class="reddit-title">The Largest Undocumented Disparity in Maternal Health</div>
-              <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 17</span>
-    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 2</span></div>
-            </div>
-            <div class="reddit-card">
-              <div class="reddit-title">Younger generations not getting healthier, UK study finds</div>
-              <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 18</span>
-    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 2</span></div>
-            </div>
-            <div class="reddit-card">
-              <div class="reddit-title">WHO says Ebola is spreading faster than they can stop it</div>
-              <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 758</span>
-    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 95</span></div>
-            </div>
-            <div class="reddit-card">
-              <div class="reddit-title">Exclusive: Read the Newest Health Care Proposal Being Circulated Among Dems</div>
-              <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 119</span>
-    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 19</span></div>
-            </div>
-            <div class="reddit-card">
-              <div class="reddit-title">Canada suspends admissions of residents of countries hit by Ebola</div>
-              <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 49</span>
-    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 2</span></div>
-            </div>
+                </div>
+                <span class="reddit-arrow">→</span>
+              </div>
+            </a>
+            <a class="reddit-card" href="https://reddit.com/r/Health/comments/1tpbzhm/researchers_found_pfas_contamination_in_up_to_50/" target="_blank" rel="noopener">
+              <div class="reddit-card-inner">
+                <div class="reddit-icon">r/</div>
+                <div class="reddit-body">
+                  <div class="reddit-title">Researchers found PFAS contamination in up to 50% of California surface water samples</div>
+                  <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 30</span>
+    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 0</span></div>
+                </div>
+                <span class="reddit-arrow">→</span>
+              </div>
+            </a>
+            <a class="reddit-card" href="https://reddit.com/r/Health/comments/1tp6pg0/the_largest_undocumented_disparity_in_maternal/" target="_blank" rel="noopener">
+              <div class="reddit-card-inner">
+                <div class="reddit-icon">r/</div>
+                <div class="reddit-body">
+                  <div class="reddit-title">The Largest Undocumented Disparity in Maternal Health</div>
+                  <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 40</span>
+    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 3</span></div>
+                </div>
+                <span class="reddit-arrow">→</span>
+              </div>
+            </a>
+            <a class="reddit-card" href="https://reddit.com/r/Health/comments/1toe77q/a_27yearold_woman_with_extreme_cramping_lied/" target="_blank" rel="noopener">
+              <div class="reddit-card-inner">
+                <div class="reddit-icon">r/</div>
+                <div class="reddit-body">
+                  <div class="reddit-title">A 27-year-old woman with extreme cramping lied about having a common colon cancer symptom to get screened sooner. She was later diagnosed at stage 4.</div>
+                  <div class="reddit-meta"><span style="display:inline-flex;align-items:center;gap:4px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">⬆ 1,718</span>
+    <span style="display:inline-flex;align-items:center;gap:4px;background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">💬 56</span></div>
+                </div>
+                <span class="reddit-arrow">→</span>
+              </div>
+            </a>
         </div></div>
 </div>
 <div class="section theme-youtube">
@@ -919,7 +1077,7 @@ body {
 </div>
 <div class="footer">
   <div class="footer-brand">Trends Intelligence</div>
-  <div>Daily snapshot · US Market · May 27, 2026</div>
+  <div>Daily snapshot · US Market · May 28, 2026</div>
   <div class="footer-links">
     <a href="https://juliannabebre-sketch.github.io/trends-reports/">← All Reports</a>
     <a href="https://trends.google.com" target="_blank">Google Trends</a>
