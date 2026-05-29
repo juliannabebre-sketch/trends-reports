@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Trends — May 29, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f1f5f9; color: #0f172a; line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+  background: #0f172a;
+  position: relative; overflow: hidden;
+  padding: 56px 24px 48px; text-align: center;
+}
+.hero::before {
+  content:''; position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse 70% 80% at 15% 50%, rgba(124,58,237,0.22) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 70% at 85% 50%, rgba(37,99,235,0.18) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 40% at 50% 100%, rgba(16,185,129,0.1) 0%, transparent 50%);
+}
+.hero::after {
+  content:''; position:absolute; bottom:0; left:0; right:0; height:1px;
+  background: linear-gradient(90deg, transparent, rgba(124,58,237,0.6), rgba(37,99,235,0.6), transparent);
+}
+.hero-inner { position:relative; z-index:1; max-width:680px; margin:0 auto; }
+.report-type-badge {
+  display:inline-flex; align-items:center; gap:6px;
+  font-size:11px; font-weight:700; letter-spacing:0.8px; text-transform:uppercase;
+  padding:5px 16px; border-radius:20px; margin-bottom:20px;
+}
+.badge-weekly { background:rgba(124,58,237,0.15); border:1px solid rgba(124,58,237,0.35); color:#c4b5fd; }
+.badge-daily  { background:rgba(37,99,235,0.15);  border:1px solid rgba(37,99,235,0.35);  color:#93c5fd; }
+.badge-annual { background:rgba(16,185,129,0.15); border:1px solid rgba(16,185,129,0.35); color:#6ee7b7; }
+.hero h1 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 900; letter-spacing: -1px; color: white;
+  line-height: 1.1; margin-bottom: 12px;
+}
+.hero h1 em {
+  font-style: normal;
+  background: linear-gradient(135deg, #a78bfa 0%, #60a5fa 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.hero-sub { color: #94a3b8; font-size: 15px; margin-bottom: 28px; }
+
+/* TIMEFRAME BLOCK */
+.timeframe-block {
+  display: inline-flex; align-items: stretch;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px; overflow: hidden; margin-bottom: 24px;
+}
+.tf-segment {
+  padding: 12px 20px; text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+.tf-segment:last-child { border-right: none; }
+.tf-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: #475569; margin-bottom: 3px; }
+.tf-value { font-size: 14px; font-weight: 700; color: white; }
+.tf-value.accent { color: #a78bfa; }
+
+/* TOPIC TAGS */
+.hero-topics {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 7px;
+}
+.topic-tag {
+  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1);
+  color: #cbd5e1; font-size: 12px; font-weight: 500;
+  padding: 5px 13px; border-radius: 20px;
+}
+
+/* PLATFORM TABS */
+.platform-nav {
+  background: white; border-bottom: 1px solid #e2e8f0;
+  display: flex; overflow-x: auto; gap: 0;
+  padding: 0 24px;
+}
+.platform-nav::-webkit-scrollbar { display: none; }
+.nav-tab {
+  display: flex; align-items: center; gap: 7px;
+  padding: 14px 20px; font-size: 13px; font-weight: 600;
+  color: #64748b; border-bottom: 2px solid transparent;
+  white-space: nowrap; cursor: pointer; transition: all 0.15s;
+  text-decoration: none;
+}
+.nav-tab:hover { color: #1e293b; }
+.nav-tab.active { color: #7c3aed; border-bottom-color: #7c3aed; }
+
+/* LAYOUT */
+.container { max-width: 960px; margin: 0 auto; padding: 36px 20px 60px; }
+
+/* SECTION */
+.section {
+  background: white; border-radius: 22px; overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05), 0 8px 24px rgba(0,0,0,0.05);
+  margin-bottom: 24px; border: 1px solid #e2e8f0;
+}
+.section-head {
+  display: flex; align-items: center; gap: 14px;
+  padding: 20px 26px; border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.section-icon {
+  width: 42px; height: 42px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.section-info { flex: 1; }
+.section-title { font-size: 16px; font-weight: 800; color: #0f172a; letter-spacing: -0.3px; }
+.section-desc  { font-size: 12px; color: #94a3b8; margin-top: 2px; font-weight: 500; }
+.section-badge {
+  font-size: 11px; font-weight: 700; padding: 5px 14px;
+  border-radius: 20px; white-space: nowrap; letter-spacing: 0.3px;
+}
+.section-body { padding: 22px 26px; }
+
+/* COLOR THEMES */
+.theme-google .section-head { background: linear-gradient(135deg, #eff6ff, #dbeafe); }
+.theme-google .section-icon { background: #dbeafe; }
+.theme-google .section-badge { background: #dbeafe; color: #1d4ed8; }
+
+.theme-reddit .section-head { background: linear-gradient(135deg, #fff7ed, #ffedd5); }
+.theme-reddit .section-icon { background: #ffedd5; }
+.theme-reddit .section-badge { background: #ffedd5; color: #c2410c; }
+
+.theme-youtube .section-head { background: linear-gradient(135deg, #fef2f2, #fee2e2); }
+.theme-youtube .section-icon { background: #fee2e2; }
+.theme-youtube .section-badge { background: #fee2e2; color: #dc2626; }
+
+.theme-amazon .section-head { background: linear-gradient(135deg, #fffbeb, #fef3c7); }
+.theme-amazon .section-icon { background: #fef3c7; }
+.theme-amazon .section-badge { background: #fef3c7; color: #b45309; }
+
+.theme-insights .section-head { background: linear-gradient(135deg, #faf5ff, #ede9fe); }
+.theme-insights .section-icon { background: #ede9fe; }
+.theme-insights .section-badge { background: #ede9fe; color: #7c3aed; }
+
+/* TOPIC BLOCK */
+.topic-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media(max-width:640px){ .topic-grid { grid-template-columns: 1fr; } }
+.topic-block {
+  background: white; border-radius: 16px; padding: 18px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.topic-name {
+  font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px;
+  color: #7c3aed; margin-bottom: 14px; display: flex; align-items: center; gap: 8px;
+}
+.topic-name::after { content:''; flex:1; height:1px; background:#ede9fe; }
+.col-head {
+  font-size: 10px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.6px; color: #94a3b8; margin: 12px 0 7px;
+  display: flex; align-items: center; gap: 6px;
+}
+.col-head::after { content:''; flex:1; height:1px; background:#f1f5f9; }
+
+/* QUERY ROWS */
+.query-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 12px; border-radius: 10px; margin-bottom: 5px;
+  background: #f8fafc; border: 1px solid #f1f5f9; transition: all 0.15s;
+  text-decoration: none; color: inherit;
+}
+.query-row:hover { background: #eff6ff; border-color: #bfdbfe; transform: translateX(2px); }
+
+/* VIRAL ROW — clickable with glow */
+a.query-row.viral-row {
+  background: linear-gradient(135deg, #fff5f5, #fff7ed);
+  border: 1.5px solid #fca5a5;
+  cursor: pointer; position: relative;
+}
+a.query-row.viral-row:hover {
+  background: linear-gradient(135deg, #fef2f2, #fff7ed);
+  border-color: #f87171;
+  transform: translateX(3px);
+  box-shadow: 0 4px 14px rgba(220,38,38,0.12);
+}
+a.query-row.explosive-row {
+  background: linear-gradient(135deg, #fff7ed, #fffbeb);
+  border: 1.5px solid #fb923c;
+}
+a.query-row.explosive-row:hover {
+  border-color: #f97316;
+  box-shadow: 0 4px 14px rgba(249,115,22,0.12);
+  transform: translateX(3px);
+}
+.why-btn {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 11px; font-weight: 700; padding: 4px 10px;
+  border-radius: 8px; white-space: nowrap; flex-shrink: 0;
+  text-decoration: none; transition: all 0.15s;
+}
+.why-news { background: #fef2f2; color: #dc2626; border: 1px solid #fca5a5; }
+.why-news:hover { background: #dc2626; color: white; }
+.why-trends { background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; margin-left: 4px; }
+.why-trends:hover { background: #2563eb; color: white; }
+.viral-pulse {
+  width: 8px; height: 8px; border-radius: 50%; background: #dc2626;
+  flex-shrink: 0; animation: vpulse 1.5s ease-in-out infinite;
+}
+@keyframes vpulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.4)} }
+
+.q-num {
+  color: #c7d2fe; font-size: 11px; font-weight: 800; width: 20px;
+  flex-shrink: 0; text-align: center;
+}
+.q-text { flex: 1; font-size: 13px; font-weight: 600; color: #1e293b; }
+.q-score {
+  font-size: 12px; font-weight: 700; color: #4f46e5;
+  background: #eef2ff; padding: 2px 8px; border-radius: 6px;
+}
+
+/* BACK TO HOME LINK */
+.back-bar {
+  background: #0f172a; padding: 12px 28px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.back-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: #94a3b8; font-size: 13px; font-weight: 600;
+  text-decoration: none; transition: color 0.15s;
+}
+.back-link:hover { color: #a78bfa; }
+.back-site { color: #475569; font-size: 12px; }
+
+/* REDDIT CARDS */
+.reddit-card {
+  padding: 14px 16px; border-radius: 12px; margin-bottom: 8px;
+  border: 1px solid #e2e8f0; background: white; transition: all 0.2s;
+  text-decoration: none; color: inherit; display: block;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.reddit-card:hover {
+  background: #fff7ed; border-color: #fb923c;
+  box-shadow: 0 4px 14px rgba(251,146,60,0.15);
+  transform: translateY(-1px);
+}
+.reddit-card-inner { display: flex; gap: 12px; align-items: flex-start; }
+.reddit-icon {
+  width: 36px; height: 36px; background: #ff4500; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; flex-shrink: 0; color: white; font-weight: 800;
+}
+.reddit-body { flex: 1; }
+.reddit-title { font-size: 14px; font-weight: 600; color: #1e293b; margin-bottom: 8px; line-height: 1.45; }
+.reddit-card:hover .reddit-title { color: #c2410c; }
+.reddit-meta { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.reddit-arrow { color: #94a3b8; font-size: 16px; align-self: center; flex-shrink: 0; transition: transform 0.2s; }
+.reddit-card:hover .reddit-arrow { transform: translateX(3px); color: #c2410c; }
+
+/* YOUTUBE CARDS */
+.yt-card {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 16px; border-radius: 12px; margin-bottom: 8px;
+  border: 1px solid #f1f5f9; background: #fafafa; transition: all 0.15s;
+  gap: 12px;
+}
+.yt-card:hover { background: #fef2f2; border-color: #fecaca; }
+.yt-info { flex: 1; }
+.yt-title { font-size: 14px; font-weight: 600; color: #1e293b; margin-bottom: 4px; line-height: 1.4; }
+.yt-views { font-size: 12px; color: #64748b; }
+.yt-btn {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: #dc2626; color: white; padding: 7px 14px;
+  border-radius: 8px; font-size: 12px; font-weight: 700;
+  text-decoration: none; white-space: nowrap; flex-shrink: 0;
+  transition: background 0.15s;
+}
+.yt-btn:hover { background: #b91c1c; }
+
+/* AMAZON */
+.amz-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
+.amz-card {
+  background: white; border: 1px solid #e2e8f0; border-radius: 14px;
+  padding: 14px 16px; display: flex; align-items: flex-start; gap: 12px;
+  transition: all 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.amz-card:hover {
+  background: #fffbeb; border-color: #fbbf24;
+  box-shadow: 0 4px 12px rgba(251,191,36,0.15);
+  transform: translateY(-1px);
+}
+.amz-rank {
+  background: linear-gradient(135deg, #ff9900, #f59e0b);
+  color: white; border-radius: 8px;
+  width: 30px; height: 30px; display: flex; align-items: center;
+  justify-content: center; font-size: 12px; font-weight: 800; flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(255,153,0,0.3);
+}
+.amz-name { font-size: 13px; font-weight: 600; color: #1e293b; line-height: 1.4; }
+
+/* INSIGHT CARDS */
+.insight-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media(max-width:600px){ .insight-grid { grid-template-columns: 1fr; } }
+.insight-card {
+  border-radius: 14px; padding: 18px 20px;
+  border: 1.5px solid;
+}
+.ic-viral  { background:#fef2f2; border-color:#fca5a5; }
+.ic-new    { background:#eff6ff; border-color:#93c5fd; }
+.ic-steady { background:#f0fdf4; border-color:#86efac; }
+.ic-cross  { background:#faf5ff; border-color:#c4b5fd; }
+.ic-title {
+  font-size: 12px; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 0.6px; margin-bottom: 10px;
+  display: flex; align-items: center; gap: 6px;
+}
+.ic-viral  .ic-title { color: #dc2626; }
+.ic-new    .ic-title { color: #2563eb; }
+.ic-steady .ic-title { color: #16a34a; }
+.ic-cross  .ic-title { color: #7c3aed; }
+.ic-item { font-size: 13px; color: #374151; margin-bottom: 4px; font-weight: 600; }
+.ic-note { font-size: 11px; color: #6b7280; font-style: italic; margin-bottom: 8px; line-height: 1.4; }
+
+/* TAKEAWAYS */
+.takeaway-box {
+  background: linear-gradient(135deg, #0f172a, #1e1b4b);
+  border-radius: 20px; padding: 28px; margin-top: 8px;
+  border: 1px solid rgba(124,58,237,0.2);
+}
+.takeaway-box h3 { color: #e2e8f0; font-size: 14px; font-weight: 800; margin-bottom: 16px; }
+.takeaway-item {
+  display: flex; gap: 14px; margin-bottom: 12px;
+  background: rgba(255,255,255,0.05); border-radius: 12px; padding: 14px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.t-num {
+  width: 28px; height: 28px; background: linear-gradient(135deg, #7c3aed, #2563eb);
+  border-radius: 8px; display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 800; color: white; flex-shrink: 0;
+}
+.t-text { font-size: 13px; color: #cbd5e1; line-height: 1.5; }
+.t-text strong { color: white; }
+
+/* QUERY BLOCK (full width) */
+.query-full {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 14px; border-radius: 10px; margin-bottom: 6px;
+  background: white; border: 1px solid #f1f5f9;
+}
+.query-full:hover { background: #f8fafc; }
+
+.no-data { font-size: 13px; color: #94a3b8; font-style: italic; padding: 12px 0; }
+
+/* FOOTER */
+.footer {
+  background: #0f172a; color: #334155;
+  text-align: center; padding: 36px 24px; font-size: 12px;
+}
+.footer-brand {
+  font-size: 15px; font-weight: 800; margin-bottom: 6px;
+  background: linear-gradient(135deg, #a78bfa, #60a5fa);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.footer-links { display: flex; justify-content: center; gap: 20px; margin-top: 14px; flex-wrap: wrap; }
+.footer-links a { color: #334155; text-decoration: none; transition: color 0.15s; }
+.footer-links a:hover { color: #94a3b8; }
+</style>
+</head>
+<body>
+<div class="back-bar">
+  <a class="back-link" href="https://juliannabebre-sketch.github.io/trends-reports/">
+    ← All Reports
+  </a>
+  <span class="back-site">🇺🇸 US Market Intelligence</span>
+</div>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="report-type-badge badge-daily">📊 Daily Snapshot</div>
+    <h1>Daily Trends <em>Snapshot</em></h1>
+    <p class="hero-sub">What's trending today across Google, Reddit, YouTube & Amazon.</p>
+    <div class="timeframe-block">
+      <div class="tf-segment">
+        <div class="tf-label">Period</div>
+        <div class="tf-value accent">Last 7 Days</div>
+      </div>
+      <div class="tf-segment">
+        <div class="tf-label">Date Range</div>
+        <div class="tf-value">May 22 – May 29, 2026</div>
+      </div>
+      <div class="tf-segment">
+        <div class="tf-label">Published</div>
+        <div class="tf-value">May 29, 2026</div>
+      </div>
+      <div class="tf-segment">
+        <div class="tf-label">Market</div>
+        <div class="tf-value">🇺🇸 US</div>
+      </div>
+    </div>
+    <div class="hero-topics"><span class="topic-tag">🌿 Health</span><span class="topic-tag">💊 Supplements</span><span class="topic-tag">⚡ Biohacking</span><span class="topic-tag">🔬 Ingredients</span></div>
+  </div>
+</div>
+<div class="container">
+
+<div class="section theme-google">
+  <div class="section-head">
+    <div class="section-icon">🔵</div>
+    <div class="section-info">
+      <div class="section-title">Google Trends</div>
+      <div class="section-desc">Rising & top search queries · Last 7 Days · US Market</div>
+    </div>
+    <span class="section-badge">Last 7 Days</span>
+  </div>
+  <div class="section-body"><div class="topic-grid">
+        <div class="topic-block">
+          <div class="topic-name">health</div>
+          <div class="col-head">🔥 Rising</div>
+          
+                <div class="query-row">
+                  <span class="q-num">1</span>
+                  <span class="q-text">google health app</span>
+                  
+    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
+      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
+        <div style="width:50%;height:100%;background:#65a30d;border-radius:10px;"></div>
+      </div>
+      <span style="font-size:11px;font-weight:700;color:#65a30d;white-space:nowrap">+200%</span>
+      <span style="font-size:10px;background:#65a30d18;color:#65a30d;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">📈 Rising</span>
+    </div>
+                </div>
+                <div class="query-row">
+                  <span class="q-num">2</span>
+                  <span class="q-text">tieghan gerard health</span>
+                  
+    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
+      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
+        <div style="width:50%;height:100%;background:#65a30d;border-radius:10px;"></div>
+      </div>
+      <span style="font-size:11px;font-weight:700;color:#65a30d;white-space:nowrap">+140%</span>
+      <span style="font-size:10px;background:#65a30d18;color:#65a30d;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">📈 Rising</span>
+    </div>
+                </div>
+                <div class="query-row">
+                  <span class="q-num">3</span>
+                  <span class="q-text">trumps health</span>
+                  
+    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
+      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
+        <div style="width:50%;height:100%;background:#65a30d;border-radius:10px;"></div>
+      </div>
+      <span style="font-size:11px;font-weight:700;color:#65a30d;white-space:nowrap">+110%</span>
+      <span style="font-size:10px;background:#65a30d18;color:#65a30d;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">📈 Rising</span>
+    </div>
+                </div>
+                <div class="query-row">
+                  <span class="q-num">4</span>
+                  <span class="q-text">trump health</span>
+                  
+    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
+      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
+        <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
+      </div>
+      <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+80%</span>
+      <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
+    </div>
+                </div>
+                <div class="query-row">
+                  <span class="q-num">5</span>
+                  <span class="q-text">battery health check iphone</span>
+                  
+    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
+      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
+        <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
+      </div>
+      <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+70%</span>
+      <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
+    </div>
+                </div>
+                <div class="query-row">
+                  <span class="q-num">6</span>
+                  <span class="q-text">companies history</span>
+                  
+    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
+      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
+        <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
+      </div>
+      <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+70%</span>
+      <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
+    </div>
+                </div>
+                <div class="query-row">
+                  <span class="q-num">7</span>
+                  <span class="q-text">google health</span>
+                  
+    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
+      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
+        <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
+      </div>
+      <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+70%</span>
+      <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
+    </div>
+                </div>
+                <div class="query-row">
+                  <span class="q-num">8</span>
+                  <span class="q-text">how to check hard drive health</span>
+                  
+    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
+      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
+        <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
+      </div>
+      <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+60%</span>
+      <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
+    </div>
+                </div>
+                <div class="query-row">
+                  <span class="q-num">9</span>
+                  <span class="q-text">how to check laptop battery health</span>
+                  
+    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
+      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
+        <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
+      </div>
+      <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+50%</span>
+      <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
+    </div>
+                </div>
+                <div class="query-row">
+                  <span class="q-num">10</span>
+                  <span class="q-text">how to check ssd health</span>
+                  
+    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
+      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
+        <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
+      </div>
+      <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+50%</span>
+      <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
+    </div>
+                </div>
+          <div class="col-head">📊 Top Searches</div>
+          
+            <div class="query-row">
+              <span class="q-num">1</span>
+              <span class="q-text">mental health</span>
+              <span class="q-score">100</span>
+            </div>
+            <div class="query-row">
+              <span class="q-num">2</span>
+              <span class="q-text">health insurance</span>
+              <span class="q-score">86</span>
+            </div>
+            <div class="query-row">
+              <span class="q-num">3</span>
+              <span class="q-text">health department</span>
+              <span class="q-score">32</span>
+            </div>
+            <div class="query-row">
+              <span class="q-num">4</span>
+              <span class="q-text">behavioral health</span>
+              <span class="q-score">32</span>
+            </div>
+            <div class="query-row">
+              <span class="q-num">5</span>
+              <span class="q-text">google health</span>
+              <span class="q-score">23</span>
+            </div>
+            <div class="query-row">
+              <span class="q-num">6</span>
+              <span class="q-text">united health</span>
+              <span class="q-score">19</span>
+            </div>
+            <div class="query-row">
+              <span class="q-num">7</span>
+              <span class="q-text">health first</span>
+              <span class="q-score">17</span>
+            </div>
+            <div class="query-row">
+              <span class="q-num">8</span>
+              <span class="q-text">home health care</span>
+              <span class="q-score">13</span>
+            </div>
+            <div class="query-row">
+              <span class="q-num">9</span>
+              <span class="q-text">cvs health</span>
+              <span class="q-score">11</span>
+            </div>
+            <div class="query-row">
+              <span class="q-num">10</span>
+              <span class="q-text">sutter health</span>
+              <span class="q-score">8</span>
+            </div>
+        </div>
+        <div class="topic-block">
+          <div class="topic-name">supplements</div>
+          <div class="col-head">🔥 Rising</div>
+          <div class="no-data">No data</div>
+          <div class="col-head">📊 Top Searches</div>
+          <div class="no-data">No data</div>
+        </div>
+        <div class="topic-block">
+          <div class="topic-name">biohacking</div>
+          <div class="col-head">🔥 Rising</div>
+          
+                <a class="query-row viral-row" href="https://news.google.com/search?q=biohacking+que+es+y+como+funciona&hl=en-US&gl=US&ceid=US:en" target="_blank" rel="noopener">
+                  <span class="viral-pulse"></span>
+                  <span class="q-num">1</span>
+                  <span class="q-text">biohacking que es y como funciona</span>
+                  
+    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
+      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
+        <div style="width:100%;height:100%;background:#dc2626;border-radius:10px;"></div>
+      </div>
+      <span style="font-size:11px;font-weight:700;color:#dc2626;white-space:nowrap">+31500%</span>
+      <span style="font-size:10px;background:#dc262618;color:#dc2626;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">🌋 Viral</span>
+    </div>
+                  <a class="why-btn why-news" href="https://news.google.com/search?q=biohacking+que+es+y+como+funciona&hl=en-US&gl=US&ceid=US:en" target="_blank" onclick="event.stopPropagation()">📰 Why?</a>
+                  <a class="why-btn why-trends" href="https://trends.google.com/trends/explore?q=biohacking+que+es+y+como+funciona&geo=US" target="_blank" onclick="event.stopPropagation()">📊 Trends</a>
+                </a>
+                <div class="query-row">
+                  <span class="q-num">2</span>
+                  <span class="q-text">biohacking conference austin</span>
+                  
+    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
+      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
+        <div style="width:50%;height:100%;background:#65a30d;border-radius:10px;"></div>
+      </div>
+      <span style="font-size:11px;font-weight:700;color:#65a30d;white-space:nowrap">+130%</span>
+      <span style="font-size:10px;background:#65a30d18;color:#65a30d;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">📈 Rising</span>
+    </div>
+                </div>
+                <div class="query-row">
+                  <span class="q-num">3</span>
+                  <span class="q-text">botanical biohacking</span>
+                  
+    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
+      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
+        <div style="width:50%;height:100%;background:#65a30d;border-radius:10px;"></div>
+      </div>
+      <span style="font-size:11px;font-weight:700;color:#65a30d;white-space:nowrap">+110%</span>
+      <span style="font-size:10px;background:#65a30d18;color:#65a30d;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">📈 Rising</span>
+    </div>
+                </div>
+                <div class="query-row">
+                  <span class="q-num">4</span>
+                  <span class="q-text">biohacking conference</span>
+                  
+    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
+      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
+        <div style="width:50%;height:100%;background:#65a30d;border-radius:10px;"></div>
+      </div>
+      <span style="font-size:11px;font-weight:700;color:#65a30d;white-space:nowrap">+110%</span>
+      <span style="font-size:10px;background:#65a30d18;color:#65a30d;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">📈 Rising</span>
+    </div>
+                </div>
+                <div class="query-row">
+                  <span class="q-num">5</span>
+                  <span class="q-text">dave asprey</span>
+                  
+    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
+      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
+        <div style="width:50%;height:100%;background:#65a30d;border-radius:10px;"></div>
+      </div>
+      <span style="font-size:11px;font-weight:700;color:#65a30d;white-space:nowrap">+110%</span>
+      <span style="font-size:10px;background:#65a30d18;color:#65a30d;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">📈 Rising</span>
+    </div>
+                </div>
+                <div class="query-row">
+                  <span class="q-num">6</span>
+                  <span class="q-text">dave asprey biohacking</span>
+                  
+    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
+      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
+        <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
+      </div>
+      <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+100%</span>
+      <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
+    </div>
+                </div>
+                <div class="query-row">
+                  <span class="q-num">7</span>
+                  <span class="q-text">dave asprey biohacking conference</span>
+                  
+    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
+      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
+        <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
+      </div>
+      <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+90%</span>
+      <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
+    </div>
+                </div>
+                <div class="query-row">
+                  <span class="q-num">8</span>
+                  <span class="q-text">biohacking for women</span>
+                  
+    <div style="display:flex;align-items:center;gap:10px;min-width:180px">
+      <div style="flex:1;height:5px;background:#f1f5f9;border-radius:10px;overflow:hidden">
+        <div style="width:30%;height:100%;background:#2563eb;border-radius:10px;"></div>
+      </div>
+      <span style="font-size:11px;font-weight:700;color:#2563eb;white-space:nowrap">+80%</span>
+      <span style="font-size:10px;background:#2563eb18;color:#2563eb;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap">↑ Growing</span>
+    </div>
+                </div>
+          <div class="col-head">📊 Top Searches</div>
+          
+            <div class="query-row">
+              <span class="q-num">1</span>
+              <span class="q-text">biohacking conference</span>
+              <span class="q-score">100</span>
+            </div>
+            <div class="query-row">
+              <span class="q-num">2</span>
+              <span class="q-text">what is biohacking</span>
+              <span class="q-score">54</span>
+            </div>
+            <div class="query-row">
+              <span class="q-num">3</span>
+              <span class="q-text">dave asprey biohacking</span>
+              <span class="q-score">35</span>
+            </div>
+            <div class="query-row">
+              <span class="q-num">4</span>
+              <span class="q-text">dave asprey</span>
+              <span class="q-score">35</span>
+            </div>
+            <div class="query-row">
+              <span class="q-num">5</span>
+              <span class="q-text">biohacking conference austin</span>
+              <span class="q-score">32</span>
+            </div>
+            <div class="query-row">
+              <span class="q-num">6</span>
+              <span class="q-text">biohacking chamber subnautica 2</span>
+              <span class="q-score">27</span>
+            </div>
+            <div class="query-row">
+              <span class="q-num">7</span>
+              <span class="q-text">peptides</span>
+              <span class="q-score">23</span>
+            </div>
+            <div class="query-row">
+              <span class="q-num">8</span>
+              <span class="q-text">dave asprey biohacking conference</span>
+              <span class="q-score">23</span>
+            </div>
+            <div class="query-row">
+              <span class="q-num">9</span>
+              <span class="q-text">biohacking meaning</span>
+              <span class="q-score">22</span>
+            </div>
+            <div class="query-row">
+              <span class="q-num">10</span>
+              <span class="q-text">reddit biohacking</span>
+              <span class="q-score">16</span>
+            </div>
+        </div>
+        <div class="topic-block">
+          <div class="topic-name">supplement ingredients</div>
+          <div class="col-head">🔥 Rising</div>
+          <div class="no-data">No data</div>
+          <div class="col-head">📊 Top Searches</div>
+          
+            <div class="query-row">
+              <span class="q-num">1</span>
+              <span class="q-text">emma supplement ingredients</span>
+              <span class="q-score">100</span>
+            </div>
+        </div></div></div>
+</div>
+<div class="section theme-reddit">
+  <div class="section-head">
+    <div class="section-icon">🟠</div>
+    <div class="section-info">
+      <div class="section-title">Reddit Hot Posts</div>
+      <div class="section-desc">Top posts from r/supplements · r/biohacking · r/health</div>
+    </div>
+    <span class="section-badge">This Week</span>
+  </div>
+  <div class="section-body"></div>
+</div>
+<div class="section theme-youtube">
+  <div class="section-head">
+    <div class="section-icon">🔴</div>
+    <div class="section-info">
+      <div class="section-title">YouTube Trending</div>
+      <div class="section-desc">Most relevant videos for your topics right now</div>
+    </div>
+    <span class="section-badge">Latest</span>
+  </div>
+  <div class="section-body">
+        <div style="margin-bottom:24px">
+          <div style="font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:0.8px;color:#dc2626;margin-bottom:10px">health trends 2026</div>
+          
+            <div class="yt-card">
+              <div class="yt-info">
+                <div class="yt-title">2026 health trends I’m actually doing (and the ones I’ll skip)</div>
+                <div class="yt-views">👁 23,163 views</div>
+              </div>
+              <a href="https://www.youtube.com/watch?v=xXoUx6W7dJg" target="_blank" class="yt-btn">▶ Watch</a>
+            </div>
+            <div class="yt-card">
+              <div class="yt-info">
+                <div class="yt-title">5 Health Trends That Will Define 2026 (AI, Biomarkers, Longevity Training)</div>
+                <div class="yt-views">👁 2,631 views</div>
+              </div>
+              <a href="https://www.youtube.com/watch?v=usXEzNu8TGo" target="_blank" class="yt-btn">▶ Watch</a>
+            </div>
+            <div class="yt-card">
+              <div class="yt-info">
+                <div class="yt-title">These Health Trends Need to Die in 2026 (and these don’t)</div>
+                <div class="yt-views">👁 190,707 views</div>
+              </div>
+              <a href="https://www.youtube.com/watch?v=4mbHKUtvA08" target="_blank" class="yt-btn">▶ Watch</a>
+            </div>
+            <div class="yt-card">
+              <div class="yt-info">
+                <div class="yt-title">Health Trends Have NEVER Been DUMBER</div>
+                <div class="yt-views">👁 136,312 views</div>
+              </div>
+              <a href="https://www.youtube.com/watch?v=G2C42yZ7ptA" target="_blank" class="yt-btn">▶ Watch</a>
+            </div>
+            <div class="yt-card">
+              <div class="yt-info">
+                <div class="yt-title">10 Wellness Business Trends Every Coach and Practitioner Must Prepare for in 2026</div>
+                <div class="yt-views">👁 320 views</div>
+              </div>
+              <a href="https://www.youtube.com/watch?v=Aeic9Pfgvo0" target="_blank" class="yt-btn">▶ Watch</a>
+            </div>
+        </div>
+        <div style="margin-bottom:24px">
+          <div style="font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:0.8px;color:#dc2626;margin-bottom:10px">supplement ingredients 2026</div>
+          
+            <div class="yt-card">
+              <div class="yt-info">
+                <div class="yt-title">NMN vs NR vs NAD+ | The Shocking Truth About Longevity Supplements | 2026 Science Explained</div>
+                <div class="yt-views">👁 344 views</div>
+              </div>
+              <a href="https://www.youtube.com/watch?v=64bYNuFM1vU" target="_blank" class="yt-btn">▶ Watch</a>
+            </div>
+            <div class="yt-card">
+              <div class="yt-info">
+                <div class="yt-title">Max Brain Powder Review: The Ingredients Nobody Talks About (2026)</div>
+                <div class="yt-views">👁 7 views</div>
+              </div>
+              <a href="https://www.youtube.com/watch?v=wS1lkeFxExg" target="_blank" class="yt-btn">▶ Watch</a>
+            </div>
+            <div class="yt-card">
+              <div class="yt-info">
+                <div class="yt-title">5 Best Brain Supplements in 2026: Clinically Dosed for Focus & Cognitive Performance</div>
+                <div class="yt-views">👁 83 views</div>
+              </div>
+              <a href="https://www.youtube.com/watch?v=M1EfI07xV_U" target="_blank" class="yt-btn">▶ Watch</a>
+            </div>
+            <div class="yt-card">
+              <div class="yt-info">
+                <div class="yt-title">Tradesman Nutrition Review: Supplement Ingredients & Product Overview 2026</div>
+                <div class="yt-views">👁 5 views</div>
+              </div>
+              <a href="https://www.youtube.com/watch?v=7sZIFxi_0i8" target="_blank" class="yt-btn">▶ Watch</a>
+            </div>
+            <div class="yt-card">
+              <div class="yt-info">
+                <div class="yt-title">Battletome Supplement: Cities of Sigmar  2026 - Full Review | Age of Sigmar 4</div>
+                <div class="yt-views">👁 3,762 views</div>
+              </div>
+              <a href="https://www.youtube.com/watch?v=KdEIg-KVVaY" target="_blank" class="yt-btn">▶ Watch</a>
+            </div>
+        </div></div>
+</div>
+<div class="section theme-amazon">
+  <div class="section-head">
+    <div class="section-icon">🟡</div>
+    <div class="section-info">
+      <div class="section-title">Amazon Bestsellers</div>
+      <div class="section-desc">Top-selling vitamins & supplements · US store</div>
+    </div>
+    <span class="section-badge">Bestsellers</span>
+  </div>
+  <div class="section-body"><div class="amz-grid"><div class="amz-card"><div class="amz-rank">#1</div><div class="amz-name">LMNT Zero Sugar Electrolytes - Raspberry Salt | Drink Mix | 30-Count</div></div><div class="amz-card"><div class="amz-rank">#2</div><div class="amz-name">Optimum Nutrition Micronized Creatine Monohydrate Powder, Unflavored, 60 Servings, 300 Grams (Packaging May Vary)</div></div><div class="amz-card"><div class="amz-rank">#3</div><div class="amz-name">Liquid I.V.® Hydration Multiplier - Popsicle Firecracker | Electrolyte Powder Drink Mix | 1 Pack (16 Servings)</div></div><div class="amz-card"><div class="amz-rank">#4</div><div class="amz-name">Nutricost Creatine Monohydrate Micronized Powder 500G, 5000mg Per Serv (5g) - 100 Servings, 17.9 Oz</div></div><div class="amz-card"><div class="amz-rank">#5</div><div class="amz-name">Optimum Nutrition Gold Standard 100% Whey Protein Powder, Double Rich Chocolate 1.98 Pound (Packaging May Vary)</div></div><div class="amz-card"><div class="amz-rank">#6</div><div class="amz-name">Liquid I.V. Hydration Multiplier Sugar-Free - Lemon Lime | Electrolyte Powder Drink Mix | 1 Pack (14 Servings)</div></div><div class="amz-card"><div class="amz-rank">#7</div><div class="amz-name">Quest Nutrition Chocolate Chip Cookie Dough Protein Bars, High Protein, Low Carb, Gluten Free, Keto Friendly, 12 Count</div></div><div class="amz-card"><div class="amz-rank">#8</div><div class="amz-name">Ultima Replenisher Daily Electrolyte Powder – Original Variety Pack, 20 Stickpacks – Zero Sugar Hydration Packets with 6 Electrolytes and Minerals – Sugar Free, Plant Based & Keto Friendly​ Drink Mix</div></div><div class="amz-card"><div class="amz-rank">#9</div><div class="amz-name">Pure Protein Chocolate Deluxe Protein Bars – 21g Protein, 3g Sugar, 190 Calories (12 count) Low Sugar* High Protein Snack - Gluten Free - Perfect for a Healthy Snack</div></div><div class="amz-card"><div class="amz-rank">#10</div><div class="amz-name">THORNE Creatine - Micronized Creatine Monohydrate Powder - Support for Muscles & Cognitive Function* - for Women & Men - Unflavored - NSF Certified for Sport - 5 g per Serving - 90 Servings</div></div></div></div>
+</div>
+</div>
+<div class="footer">
+  <div class="footer-brand">Trends Intelligence</div>
+  <div>Daily snapshot · US Market · May 29, 2026</div>
+  <div class="footer-links">
+    <a href="https://juliannabebre-sketch.github.io/trends-reports/">← All Reports</a>
+    <a href="https://trends.google.com" target="_blank">Google Trends</a>
+    <a href="https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtVnVHZ0pWVXlnQVAB" target="_blank">Google News: Health</a>
+    <a href="https://reddit.com/r/supplements" target="_blank">r/supplements</a>
+    <a href="https://reddit.com/r/biohacking" target="_blank">r/biohacking</a>
+  </div>
+</div>
+</body>
+</html>
